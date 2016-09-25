@@ -1,0 +1,27 @@
+
+.about
+    height: 1000px
+    background-color: #fff
+    background-image: url('/img/list1.png'),url('/img/list2.png'),url('/img/list3.png'),url('/img/bg-about.jpg')
+    background-position: 25% 40%, 10% 10%, 90% 40%, bottom center
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat
+    background-size: auto, auto, auto, cover
+    .container
+        width: 800px
+    &__title
+        text-align: center
+        @extend %title
+        background: url('/img/svg/about_header.svg') no-repeat 50% 40%
+        background-size: 58% 58%
+        padding: 80px 120px
+        line-height: 63px
+    &__list
+        white-space: nowrap
+        list-style: none
+        margin: 0
+        padding: 0
+        &-item
+            white-space: normal
+            display: inline-block
+            width: 50%
+            padding: 5px
