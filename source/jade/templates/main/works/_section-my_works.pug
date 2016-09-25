@@ -1,21 +1,31 @@
-section.portfolio
+section.works
     .container
-        h2.portfolio-title Мои работы
-        .portfolio-content
-            .slider
-                .slider-left
+        h2.works-title Мои работы
+        .works__slider
+            .works__slider-leftside
+                .slider-text
                     h3.slider-title Сайт школы онлайн образования
                     p.slider-tech html, css, javascript
-                    .btn-slider
-                        a(href='#' class='slider-link') Посмотреть сайт
+                    a(href='#' class='slider-link') Посмотреть сайт
 
-                .slider-right
-                    ul.slider-right__view
-                        li.slider-right__item
-                            img(src='sda' class='project-pic')
-                    ul.slider-right__preview
-                        li.slider-preview
-                            img(src='sad' class='slider-pic')
-                        li.slider-preview
-                            img(src='sad' class='slider-pic')
+            .works__slider-rightside
+                button.slider__btn.next
+                    svg
+                        use(xlink:href='/img/svg-sprites/sprite.svg#portf_arrow_up')
+                button.slider__btn.prev
+                    svg
+                        use(xlink:href='/img/svg-sprites/sprite.svg#portf_arrow_down')
+                ul.slider__view
+                    li.slider__view__item
+                        img(src='/img/project-pic-2.jpg' class='slider__view__pic')
+                ul.slider__preview.one
+                    li.slider__preview-item
+                        img(src='/img/project-pic-1.jpg' class='slider__preview-pic')
+                    li.slider__preview-item
+                        img(src='/img/project-pic-3.jpg' class='slider__preview-pic')
+                ul.slider__preview.two
+                    li.slider__preview-item
+                        img(src='/img/project-pic-3.jpg' class='slider__preview-pic')
+                    li.slider__preview-item
+                        img(src='/img/project-pic-1.jpg' class='slider__preview-pic')
 

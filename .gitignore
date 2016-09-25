@@ -28,12 +28,12 @@ Thumbs.db
 .CVS
 .git
 .hg
-.idea
+/.idea
 .svn
-bower_components
-dist
-build
+/bower_components
+/dist
+/build
 
 # Node.JS
-node_modules
+/node_modules
 npm-debug.log

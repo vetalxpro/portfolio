@@ -24,6 +24,6 @@ module.exports = function() {
           }
         }
       }))
-      .pipe($.gulp.dest($.config.root + '/img'));
+      .pipe($.gulp.dest($.config.root + '/img/svg-sprites'));
   });
 };

@@ -1,14 +1,15 @@
 .header
-    background-image: url('/img/bg-forest-photo.jpg')
-    background-position: center center
-    background-repeat: no-repeat
-    background-size: cover
-    background-color: #fff
-    height: 600px
+    position: relative
+    background-image: url('/img/svg/bg.svg'), url('/img/bg-forest-photo.jpg')
+    background-position: bottom, center
+    background-repeat: no-repeat, no-repeat
+    background-size: 101%,cover
+    height: 790px
+    margin-bottom: -112px
 
     .header__top
-        padding: 28px 30px 0 30px
-        margin-bottom: 100px
+        padding: 28px 30px 28px 30px
+        margin-bottom: 72px
         @include clearfix
         .social
             .social-link
@@ -16,6 +17,12 @@
                 &:hover
                     color: #59943a
     .header__author
+
+        background: url('/img/svg/portfolio_header.svg')
+        background-position: 50% 30%
+        background-repeat: no-repeat
+        background-size: 70%
+
         &-photo
             width: 141px
             height: 141px
@@ -41,6 +48,8 @@
                 font-size: 16px
                 @include font('roboto-reg')
 
+
+
 .btn-menu
     position: absolute
     top: 28px
@@ -56,6 +65,19 @@
         background-color: #fff
         &:nth-child(3)
             margin-bottom: 0
+
+.down-arrow
+    position: absolute
+    left: 49%
+    bottom: 256px
+    width: 26px
+    height: 16px
+    cursor: pointer
+    svg
+        width: 100%
+        height: 100%
+        opacity: 0.7
+        fill: #fff
 
 
 
