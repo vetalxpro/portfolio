@@ -1,0 +1,21 @@
+header.header
+    .container
+        .header__top
+            .social
+                ul.social__list
+                    each social in ['vk','git','in']
+                        li.social__item
+                            a(href='#' class='social-link')= social
+            .btn-nav
+                i.btn-nav-line
+                i.btn-nav-line
+                i.btn-nav-line
+        .header__main
+            .header__main-author
+                .author-photo
+                    img(src='img/man-photo.jpg' class='author-pic')
+            h2.header__title Блог
+            p.header__info Статьи, которые я написал
+        .down-arrow
+
+

@@ -1,0 +1,24 @@
+extends layouts/_layout
+
+block variables
+    -var title ='Мои работы - Сайт портфолио'
+
+block main-styles
+
+    link(rel='stylesheet' href='css/main.css')
+
+
+block main-scripts
+
+    script(src='js/script.js')
+
+
+
+block content
+    .wrapper
+        include templates/headers/_header
+        include templates/main/works/_section-my_works
+        include templates/main/works/_section-about_me
+
+block footer
+    include templates/footers/_footer

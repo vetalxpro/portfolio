@@ -1,0 +1,44 @@
+-
+    var aboutMeInfo = ['Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.',
+    'Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!']
+-
+    var skillText='Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку.'
+
+-
+    var skills = [
+    {title:'Frontend',
+    list:['HTML5','CSS3','JavaScript & jQuery']
+    },
+    {title:'Backend',
+    list:['PHP','mySQL','Node.js & npm','Mongo.db']
+    },
+    {title:'WorkFlow',
+    list:['Git','Gulp','Bower']
+    }
+    ]
+
+
+section.about-me
+    .container
+        .about-me__left
+            h2.about-me__title Обо мне
+            .about-me__info
+                .about-me__info-photo
+                    img(src='s' class='about-me-pic')
+                .about-me__info-content
+                    h3.about-me__subtitle Кто я
+                    each item in aboutMeInfo
+                        p.about-me__info-text=item
+        .about-me__right
+            h3.about-me__subtitle Чем я могу быть полезен
+            p.about_me__info-text= skillText
+            .about-me__skills
+                each skill in skills
+                    .skill__block
+                        p.skills__title= skill.title
+                        ul.skills__list
+                            each list in skill.list
+                                li(class='skills__list-item')
+                                    .skill-progress
+                                        span(class='skill-item__name')= list
+

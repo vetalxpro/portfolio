@@ -1,0 +1,20 @@
+extends layouts/_index-layout
+
+block variables
+    - var title = 'Cайт портфолио - Login'
+
+block main-styles
+    link(rel='stylesheet' href='/css/login.css')
+
+block main-scripts
+    script(src='/js/script.js' defer)
+
+
+block content
+    .wrapper
+        include templates/main/index/_login-main
+
+block footer
+    include templates/footers/_index-footer
+
+

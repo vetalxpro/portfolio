@@ -1,0 +1,23 @@
+extends layouts/_layout
+
+block variables
+    -var title= 'Блог - Сайт портфолио'
+
+block main-styles
+
+    link(rel='stylesheet' href='css/main.css')
+
+
+block main-scripts
+
+    script(src='scripts/script.js')
+
+
+
+block content
+    .wrapper
+        include templates/headers/_blog-header
+        include templates/main/blog/_section-main
+
+block footer
+    include templates/footers/_footer

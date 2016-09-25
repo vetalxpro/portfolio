@@ -1,0 +1,22 @@
+-
+    var contacts = [
+    {icon:'skype',
+    text:'skype_kdn'},
+    {icon:'email',
+    text:'astahov@gmail.com'},
+    {icon:'phone',
+    text:'+7 931 200 93 24'},
+    {icon:'adress',
+    text:'Новосибирск, ул. Инская, д.14'}
+    ]
+
+section.contacts
+    .container
+        .contacts__map
+            .contacts__container
+                h3.contacts__title
+                ul.contacts__list
+                    each contact in contacts
+                        li(class='contacts__list-item')
+                            i(class='contacts-icon')
+                            span(class='contacts-text')= contact.text

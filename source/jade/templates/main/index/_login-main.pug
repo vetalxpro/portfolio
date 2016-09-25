@@ -1,0 +1,68 @@
+-
+    var navLinks=[
+    {title:'Мои работы',
+    href:'works.html'
+    },
+    {title:'Обо мне',
+    href:'about-me.html'
+    },
+    {title:'Блог',
+    href:'blog.html'
+    }
+    ]
+
+header.header
+    .login-button
+        a.login-link(href='#') Авторизоваться
+
+main.main
+    .main-window.window-wellcome
+        .window-wellcome__photo
+            img(class='window-wellcome__photo-pic' src='/img/man-photo.jpg')
+        .window-wellcome__author
+            h1.author-name Владимир Астахов
+            p.author-site Личный сайт веб разработчика
+        .window-wellcome__social
+            ul.social__list
+                each link in['fa-vk','fa-github-alt','fa-linkedin']
+                    li.social__list-item
+                        a(href='#' class='social-link')
+                            i(class='fa ' + link)
+        .window-wellcome__buttons
+            each link in navLinks
+                .window-wellcome__buttons-btn
+                    a(href=link.href class='btn-link')= link.title
+    .main-window.window-login
+        h2.window-login__title Авторизуйтесь
+        form.window-login__form(id='login-form' name='login-form' action='')
+            .form__elements
+                div(class='form__elements-input')
+                    i.form-input__ico.fa.fa-user
+                    input(type='text' id='name' name='name' class='form-input' placeholder='Логин')
+                div(class='form__elements-input')
+                    i.form-input__ico.fa.fa-key
+                    input(type='password' id='password' name='name' class='form-input' placeholder='Пароль')
+                div(class='form__elements-captcha')
+                    input(type='checkbox' id='isHuman' name='isHuman' class='form-checkbox')
+                    label(for='isHuman' class='form-checkbox__fake') Я человек
+
+                    p(class='form-captcha__robot') Вы точно не робот?
+                    input(type='radio' name='n')
+                    label(for='') Да
+                    input(type='radio' name='n')
+                    label(for='') Не уверен
+            .form__buttons
+                a(class='form-button button-green' href='/') На главную
+                button(type='submit' class='form-button button-green' name='login-button') Войти
+
+
+
+
+
+
+
+
+
+
+
+

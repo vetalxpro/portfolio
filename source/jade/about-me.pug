@@ -1,0 +1,24 @@
+extends layouts/_layout
+
+block variables
+    - var title = 'Обо мне - Сайт портфолио'
+
+block main-styles
+
+    link(rel='stylesheet' href='css/main.css')
+
+
+block main-scripts
+
+    script(src='scripts/script.js')
+
+
+
+block content
+    .wrapper
+        include templates/headers/_header
+        include templates/main/about-me/_section-about-me
+        include templates/main/about-me/_section-contacts
+
+block footer
+    include templates/footers/_footer

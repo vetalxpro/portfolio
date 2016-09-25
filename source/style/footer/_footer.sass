@@ -1,0 +1,100 @@
+$footer-bg: #262626
+
+
+
+.footer__top
+    background: rgba(55, 62, 66, 0.85)
+    .container
+        padding: 30px 0
+        @include clearfix
+    &-text
+        margin: 0
+        max-width: 350px
+        opacity: 0.6
+        line-height: 24px
+    &-left
+        float: left
+        padding-left: 30px
+        padding-bottom: 8px
+        color: #fff
+        width: 600px
+        text-align: left
+        font-size: 16px
+        @include font('roboto-light')
+    &-middle
+        padding-left: 30px
+        padding-bottom: 8px
+        float: left
+        width: 600px
+        color: #fff
+        border-left: 2px solid rgba(255,255,255,0.2)
+        border-right: 2px solid rgba(255,255,255,0.2)
+        .social-link
+            opacity: 0.6
+            &:hover
+                opacity: 1
+
+    &-right
+        float: left
+        padding-bottom: 8px
+
+.footer__top-right
+    padding-left: 30px
+    float: left
+    width: 600px
+    .footer-quote
+        margin: 0
+        color: #fff
+        opacity: 0.3
+        line-height: 26px
+        max-width: 490px
+        font-weight: 300
+        @include font('roboto-light-it')
+        font-style: italic
+    .footer-quote__author
+        margin: 0
+        line-height: 26px
+        @include font('roboto-bold-it')
+        color: #fff
+        opacity: 0.5
+
+.footer__bottom
+    text-align: center
+    opacity: 0.85
+    background: #6c9c5a
+    @include font('roboto-light')
+    font-size: 16px
+    font-weight: 300
+    .footer__bottom-content
+        padding: 9px 0 12px 0
+        margin: 0
+
+.footer__nav
+    padding: 0
+    margin: 0
+    margin-bottom: 25px
+    list-style: none
+    @include clearfix
+    &-item
+        float: left
+        margin-right: 40px
+        .footer-link
+            color: #fff
+            opacity: 0.6
+            text-decoration: none
+            @include font('roboto-bold')
+            &:hover
+                opacity: 1
+
+.social__list
+    padding: 0
+    margin: 0
+    list-style: none
+    &-item
+        display: inline-block
+        margin-right: 30px
+        .social-link
+            color: #fff
+            font-size: 24px
+            font-weight: 500
+            
