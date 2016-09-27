@@ -1,0 +1,55 @@
+.main-title
+    width: 500px
+    display: inline-block
+    text-align: center
+    margin: 0
+    font-size: 63px
+    line-height: 66px
+    font-weight: 400
+    padding: 70px 0
+    color: #373e42
+    position: relative
+    text-transform: uppercase
+    @include font('sans')
+    &:after
+        content: ''
+        display: inline-block
+        position: absolute
+        bottom: 45px
+        left: 50%
+        background-color: #373e42
+        margin-left: -45px
+        height: 3px
+        width: 90px
+
+.main-subtitle
+    width: 320px
+    display: inline-block
+    text-align: center
+    margin: 0
+    font-size: 35px
+    line-height: 41px
+    font-weight: 400
+    padding: 5px 0
+    color: #566358
+    position: relative
+    text-transform: uppercase
+    @include font('sans')
+    &:after
+        content: ''
+        display: inline-block
+        position: absolute
+        bottom: -20px
+        left: 50%
+        background-color: #566358
+        margin-left: -45px
+        height: 3px
+        width: 90px
+
+.blog-title
+    margin: 0
+    margin-bottom: 28px
+    color: #455a64
+    font-size: 35px
+    @include font('sans')
+    font-weight: 400

@@ -1,21 +1,27 @@
-header.header
+header.header#header
     .container
         .header__top
             .social
                 ul.social__list
-                    each social in ['vk','git','in']
-                        li.social__item
-                            a(href='#' class='social-link')= social
-            .btn-nav
-                i.btn-nav-line
-                i.btn-nav-line
-                i.btn-nav-line
-        .header__main
-            .header__main-author
-                .author-photo
-                    img(src='img/man-photo.jpg' class='author-pic')
-            h2.header__title Блог
-            p.header__info Статьи, которые я написал
-        .down-arrow
+                    each link in links
+                        li.social__list-item
+                            a(href='#' class='social-link')= link
+                                svg(class="icon-social icon-" + link)
+                                    use(xlink:href="/img/svg-sprites/sprite.svg#" + link)
+            .btn-menu
+                .btn-menu__line
+                .btn-menu__line
+                .btn-menu__line
+
+        .header__author.header__author-blog
+            .header__author-photo
+                img(src='/img/man-photo.jpg' class='author-pic')
+            .header__author-info
+                h1.blog__title= pageTitles.blog
+                span.blog__subtitle= pageSubtitles.blog
+        a.down-arrow(href='#works')
+            svg(class='icon icon-down-arrow')
+                use(xlink:href='/img/svg-sprites/sprite.svg#arrow_down')
+
 
 

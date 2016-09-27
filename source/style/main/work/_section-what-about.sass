@@ -7,16 +7,12 @@
     background-position: 25% 40%, 10% 10%, 90% 40%, bottom center
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat
     background-size: auto, auto, auto, cover
+    text-align: center
     .container
         max-width: 800px
         position: relative
-    &__title
-        text-align: center
-        @extend %title
-        background: url('/img/svg/about_header.svg') no-repeat 50% 40%
-        background-size: 58% 58%
-        padding: 80px 120px
-        line-height: 63px
+    .main-title
+        background: url('/img/svg/about_header.svg') no-repeat 50% 50%
     &__list
         font-size: 0
         list-style: none
@@ -77,25 +73,8 @@
     padding-top: 32px
     border-radius: 5px
     overflow: hidden
-    &__title
-        margin: 0
-        font-size: 35px
-        font-weight: 400
-        color: #566358
-        text-align: center
-        position: relative
-        text-transform: uppercase
-        @include font('sans')
-        margin-bottom: 63px
-        &:after
-            content: ''
-            position: absolute
-            bottom: -25px
-            left: 50%
-            background-color: #566358
-            transform: translateX(-50%)
-            height: 3px
-            width: 89px
+    .main-subtitle
+        margin-bottom: 60px
     &__group-inputs
         padding: 0 20px
     &-text-cont

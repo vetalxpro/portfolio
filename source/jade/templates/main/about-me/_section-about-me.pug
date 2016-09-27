@@ -22,16 +22,16 @@ section.about-me
     .container
         .about-me__left
             .about-me__title
-                h2.about-me__title-text Обо мне
+                h2.main-title Обо мне
             .about-me__info
                 .about-me__info-photo
                     img(src='/img/man-photo.jpg' class='about-me-pic')
                 .about-me__info-content
-                    h3.about-me__subtitle Кто я
+                    h3.main-subtitle Кто я
                     each item in aboutMeInfo
                         p.about-me__text=item
         .about-me__right
-            h3.about-me__subtitle Чем я могу быть полезен
+            h3.main-subtitle Чем я могу быть вам полезен
             p.about-me__text= skillText
             .skill
                 each skill in skills

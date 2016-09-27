@@ -1,27 +1,11 @@
-.contacts
+.contact
     background: url('/img/map.jpg') no-repeat
     background-position: center
     background-size: cover
+    text-align: center
 
-    &__title
-        margin: 0
-        font-size: 35px
-        font-weight: 400
-        color: #566358
-        text-align: center
-        position: relative
-        text-transform: uppercase
-        @include font('sans')
-        margin-bottom: 63px
-        &:after
-            content: ''
-            position: absolute
-            bottom: -25px
-            left: 50%
-            background-color: #566358
-            transform: translateX(-50%)
-            height: 3px
-            width: 89px
+    .main-subtitle
+        margin-bottom: 50px
 
 
     &__map
@@ -34,25 +18,27 @@
             display: inline-block
             height: 100%
             vertical-align: middle
-    &__menu
-        padding: 36px 40px
-        border-radius: 5px
-        overflow: hidden
-        display: inline-block
-        width: 380px
-        vertical-align: middle
-        background: rgba(244, 245, 240, 0.85)
-    &__list
-        margin: 0
-        padding: 0
-        list-style: none
-        &-item
-            text-align: left
+
+.contact__menu
+    padding: 36px 40px
+    border-radius: 5px
+    overflow: hidden
+    display: inline-block
+    width: 380px
+    vertical-align: middle
+    background: rgba(244, 245, 240, 0.85)
+
+.contact__list
+    margin: 0
+    padding: 0
+    list-style: none
+    text-align: left
+.contact__list-item
+    margin-bottom: 10px
 
 .contact-link
     display: inline-block
     padding: 5px
-    margin-bottom: 10px
     text-decoration: none
     color: #566358
     font-size: 16px

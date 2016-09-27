@@ -7,61 +7,58 @@
     background: url('/img/svg/about_bg_left.svg'), url('/img/svg/about_bg_right.svg')
     background-repeat: no-repeat, no-repeat
     background-position: 0 0, 100% 0
-    background-size: 50% , 51%
+    background-size: 50%, 51%
     .container
         @include clearfix
+
 .about-me__left
     width: 50%
     float: left
+    text-align: center
+
 .about-me__title
-        float: left
-        padding: 0 10px
-        width: 50%
-.about-me__title-text
-        text-align: center
-        margin: 0
-        font-size: 63px
-        font-weight: 400
-        color: #373e42
-        position: relative
-        text-transform: uppercase
-        @include font('sans')
-        &:after
-            content: ''
-            position: absolute
-            bottom: -10px
-            left: 50%
-            background-color: #373e42
-            transform: translateX(-50%)
-            height: 3px
-            width: 89px
+    float: left
+    padding: 0 10px
+    width: 50%
+    text-align: center
+    .main-title
+        width: 100%
+        background: url("/img/svg/about_header.svg") no-repeat 50% 50%
+        background-size: 80% 80%
+
 .about-me__info
-        width: 50%
-        padding: 20px
-        float: right
-        @include clearfix
-        &-photo
-            max-width: 437px
-            max-height: 390px
-            overflow: hidden
-            margin-bottom: 40px
-        .about-me-pic
-            width: 100%
-
-
+    width: 50%
+    padding: 20px
+    float: right
+    @include clearfix
+    &-photo
+        max-width: 437px
+        max-height: 390px
+        overflow: hidden
+        margin-bottom: 40px
+    .about-me-pic
+        width: 100%
+    .main-subtitle
+        margin-bottom: 58px
 
 .about-me__right
-        width: 50%
-        float: left
-        padding: 20px 40px
+    width: 50%
+    float: left
+    padding: 20px 40px
+    text-align: center
+    .main-subtitle
+        
+        margin-bottom: 50px
 
 .skill__title
+
     color: #566358
     font-weight: 500
     @include font('roboto-med')
     font-size: 28px
-.skill__block
 
+.skill__block
+    text-align: left
     .skill__list
         list-style: none
         padding: 20px 0
@@ -89,25 +86,6 @@
                 font-size: 14px
                 @include font('roboto-med')
 
-.about-me__subtitle
-    text-align: center
-    margin: 0
-    font-size: 35px
-    font-weight: 400
-    color: #566358
-    position: relative
-    text-transform: uppercase
-    @include font('sans')
-    margin-bottom: 60px
-    &:after
-        content: ''
-        position: absolute
-        bottom: -15px
-        left: 50%
-        background-color: #566358
-        transform: translateX(-50%)
-        height: 3px
-        width: 89px
 
 .about-me__text
     color: #566358

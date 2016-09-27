@@ -1,0 +1,69 @@
+.blog
+    padding-bottom: 185px
+    .container
+        @include clearfix
+
+.blog__sidebar
+    padding: 10px
+    width: 20%
+    float: left
+.blog__sidebar-list
+        list-style: none
+        padding: 0
+        margin: 0
+.blog__sidebar-item
+
+        text-align: right
+
+.blog__sidebar-link
+        max-width: 280px
+        @include font('roboto-reg')
+        color: #455a64
+        text-decoration: none
+        display: inline-block
+        padding: 15px 20px
+        &:hover
+            color: #4e8839
+.blog__sidebar-link_active
+        @include font('roboto-bold')
+        color: #4e8839
+        border-right: 3px solid #4e8839
+
+.blog__articles
+    width: 75%
+    float: right
+
+.blog__articles-list
+    list-style: none
+    padding: 0
+    margin: 0
+.blog__articles-item
+    padding: 10px
+    padding-right: 150px
+    margin-bottom: 70px
+    &::after
+        content: ''
+        display: block
+        height: 5px
+        background: #373e42
+        opacity: 0.1
+        width: 70%
+    &:last-child
+        &::after
+            display: none
+.blog__articles-time
+    display: block
+    padding: 5px 0
+    font-size: 16px
+    color: rgba(78, 136, 57, 0.7)
+    font-weight: 400
+    @include font('roboto-reg')
+    margin-bottom: 15px
+.blog__articles-text
+    color: #455a64
+    font-weight: 400
+    @include font('roboto-reg')
+    line-height: 26px
+    font-size: 16px
+    margin: 0
+    margin-bottom: 70px

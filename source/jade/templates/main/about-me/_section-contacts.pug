@@ -14,12 +14,12 @@
     href:'#'}
     ]
 
-section.contacts
+section.contact
     .container
-        .contacts__map
-            .contacts__menu
-                h3.contacts__title Контакты
-                ul.contacts__list
+        .contact__map
+            .contact__menu
+                h3.main-subtitle Контакты
+                ul.contact__list
                     each contact in contacts
-                        li(class='contacts__list-item')
+                        li(class='contact__list-item')
                             a(href=contact.href class='contact-link' + ' contact-' + contact.name)= contact.text
