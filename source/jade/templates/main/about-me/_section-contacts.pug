@@ -1,22 +1,25 @@
 -
     var contacts = [
-    {icon:'skype',
-    text:'skype_kdn'},
-    {icon:'email',
-    text:'astahov@gmail.com'},
-    {icon:'phone',
-    text:'+7 931 200 93 24'},
-    {icon:'adress',
-    text:'Новосибирск, ул. Инская, д.14'}
+    {name:'skype',
+    text:'vetaloptimus',
+    href:'skype:vetaloptimus'},
+    {name:'email',
+    text:'vetalpro.exe@gmail.com',
+    href:'mailto:vetalpro.exe@gmail.com'},
+    {name:'phone',
+    text:'+7 931 200 93 24',
+    href:'tel:+79312009324'},
+    {name:'adress',
+    text:'Новосибирск, ул. Инская, д.14',
+    href:'#'}
     ]
 
 section.contacts
     .container
         .contacts__map
-            .contacts__container
-                h3.contacts__title
+            .contacts__menu
+                h3.contacts__title Контакты
                 ul.contacts__list
                     each contact in contacts
                         li(class='contacts__list-item')
-                            i(class='contacts-icon')
-                            span(class='contacts-text')= contact.text
+                            a(href=contact.href class='contact-link' + ' contact-' + contact.name)= contact.text

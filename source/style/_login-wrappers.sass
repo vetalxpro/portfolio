@@ -1,7 +1,11 @@
 $container-width: 1800px
 
-*
+
+html
   box-sizing: border-box
+
+*, *::after, *::after
+  box-sizing: inherit
 
 html,
 body
@@ -14,10 +18,7 @@ body
   line-height: 1.25
   color: #fff
 
-.wrapper
-  min-height: 100%
-  margin-bottom: -4%
-  background: #000 url('/img/bg-forest-photo.jpg') repeat-x 50% 0
+
 
 
 

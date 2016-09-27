@@ -5,17 +5,18 @@
     background-repeat: no-repeat, no-repeat
     background-size: 101%,cover
     height: 790px
-    margin-bottom: -112px
+    //margin-bottom: -112px
 
     .header__top
         padding: 28px 30px 28px 30px
         margin-bottom: 72px
         @include clearfix
-        .social
-            .social-link
-                opacity: 1
-                &:hover
-                    color: #59943a
+        .icon-social
+            fill: #fff
+            &:hover
+                fill: #59943a
+
+
     .header__author
 
         background: url('/img/svg/portfolio_header.svg')
@@ -79,9 +80,12 @@
     fill: #fff
     &:hover
         opacity: 1
-    svg
+    .icon-down-arrow
         width: 100%
         height: 100%
+
+
+
 
 
 
