@@ -4,7 +4,7 @@ main.main
 
     .main-window.window-wellcome
         .window-wellcome__photo
-            img(class='window-wellcome__photo-pic' src='/img/man-photo.jpg')
+            img(class='window-wellcome__photo-pic' src='img/man-photo.jpg')
         .window-wellcome__author
             h1.author-name= author.name
             p.author-site= author.site
@@ -14,7 +14,7 @@ main.main
                     li.social__list-item
                         a(href='#' class='social-link')= link
                             svg(class="icon-social icon-" + link)
-                                use(xlink:href="/img/svg-sprites/sprite.svg#" + link)
+                                use(xlink:href="img/svg-sprites/sprite.svg#" + link)
         .window-wellcome__buttons
             each link in navButtons
                 .window-wellcome__buttons-btn
@@ -42,7 +42,7 @@ main.main
                     input(type='radio' name='n')
                     label(for='') Не уверен
             .form__buttons
-                a(class='form-button button-green' href='/') На главную
+                a(class='form-button button-green' href='/portfolio') На главную
                 button(type='submit' class='form-button button-green' name='login-button') Войти
 
 
