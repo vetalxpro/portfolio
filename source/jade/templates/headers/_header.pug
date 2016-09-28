@@ -6,7 +6,7 @@ header.header#header
                     each link in links
                         li.social__list-item
                             a(href='#' class='social-link')= link
-                                svg(class="icon-social icon-" + link)
+                                svg(class="icon-social icon-" + link width="30" height="30")
                                     use(xlink:href="img/svg-sprites/sprite.svg#" + link)
             .btn-menu
                 .btn-menu__line
@@ -20,7 +20,7 @@ header.header#header
                 h1.author-name= author.name
                 p.author-site= author.site
         a.down-arrow(href='#works')
-            svg(class='icon icon-down-arrow')
+            svg(class='icon icon-down-arrow' width="30" height="30")
                 use(xlink:href='img/svg-sprites/sprite.svg#arrow_down')
 
 

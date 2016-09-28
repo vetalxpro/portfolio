@@ -1,31 +1,53 @@
 .contact
-    background: url('../img/map.jpg') no-repeat
-    background-position: center
-    background-size: cover
+    position: relative
     text-align: center
+    height: 1185px
 
     .main-subtitle
         margin-bottom: 50px
 
 
-    &__map
-        height: 1185px
-        padding-bottom: 185px
+.map
+    height : 100%
+.map__popup
+    padding: 10px
+    text-align: center
+    font-size: 16px
+    font-weight: bold
 
-        text-align: center
-        &::before
-            content: ''
-            display: inline-block
-            height: 100%
-            vertical-align: middle
+.contact__toggler
+    position: absolute
+    top: 8px
+    left: 50%
+    outline: none
+    z-index: 100
+    margin-left: -65px
+    padding: 9px
+    color: rgb(86,86,86)
+    font-family: Roboto, Arial,sans-serif
+    text-align: center
+    font-size: 11px
+    background: #fff
+    border-radius: 2px
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,0.3)
+    cursor: pointer
+    border: none
+    width: 130px
+    &:hover
+        color: #000
+        background: #eaeaea
+
 
 .contact__menu
+    z-index: 50
+    top: 20%
+    left: 50%
+    margin-left: -180px
+    position: absolute
     padding: 36px 40px
     border-radius: 5px
     overflow: hidden
-    display: inline-block
     width: 380px
-    vertical-align: middle
     background: rgba(244, 245, 240, 0.85)
 
 .contact__list
