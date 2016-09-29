@@ -1,6 +1,9 @@
-section.works#works
+section.works
+    a.down-arrow(href='#works')
+        svg(class='icon icon-down-arrow' width="30" height="30")
+            use(xlink:href='img/svg-sprites/sprite.svg#arrow_down')
     .container
-        h2.main-title Мои работы
+        h2.main-title#works Мои работы
         .works__slider
             .works__slider-leftside
                 .slider-text

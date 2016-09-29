@@ -19,10 +19,13 @@
 
 
 section.about-me
+    a.down-arrow(href='#aboutme')
+        svg(class='icon icon-down-arrow' width="30" height="30")
+            use(xlink:href='img/svg-sprites/sprite.svg#arrow_down')
     .container
         .about-me__left
             .about-me__title
-                h2.main-title Обо мне
+                h2.main-title#aboutme Обо мне
             .about-me__info
                 .about-me__info-photo
                     img(src='img/man-photo.jpg' class='about-me-pic')

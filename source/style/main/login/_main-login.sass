@@ -3,7 +3,7 @@
     top: 25px
     right: 100px
     max-width: 180px
-    .login-link
+    &__link
         display: block
         padding: 15px 30px
         @include font('roboto-med')
@@ -25,13 +25,19 @@
     background-size: cover
     text-align: center
     margin-bottom: -60px
-    &:before
-        content: ''
-        display: inline-block
+    .container
+        width: $container-width
+        margin: 0 auto
         height: 100%
-        vertical-align: middle
+        position: relative
+        &:before
+            content: ''
+            display: inline-block
+            height: 100%
+            vertical-align: middle
 
-.main-window
+.window
+    padding-top: 40px
     display: inline-block
     vertical-align: middle
     text-align: center
@@ -39,9 +45,8 @@
     background: rgba(18, 38, 32, 0.6)
     border-radius: 5px
     overflow: hidden
-
-.window-wellcome
-    padding-top: 40px
+    &__author
+        margin-bottom: 30px
     &__photo
         margin: 0 auto
         margin-bottom: 15px
@@ -49,83 +54,55 @@
         height: 140px
         border-radius: 50%
         overflow: hidden
-        &-pic
-            display: block
-            max-width: 100%
-            height: auto
-    &__author
-        margin-bottom: 30px
-        .author-name
-            margin: 0
-            margin-bottom: 3px
-            font-size: 28px
-            font-weight: 500
-            opacity: 0.9
-            @include font('roboto-med')
-
-        .author-site
-            margin: 0
-            opacity: 0.8
-            @include font('roboto-med')
-            font-weight: 400
-
-    &__social
+    &__photo-pic
+        display: block
+        max-width: 100%
+        height: auto
+    &__author-name
+        margin: 0
+        margin-bottom: 3px
+        font-size: 28px
+        font-weight: 500
+        opacity: 0.9
+        @include font('roboto-med')
+    &__text
+        opacity: 0.8
+        @include font('roboto-med')
+        font-weight: 400
+    .social
         margin-bottom: 35px
-        .icon-social
+    .social-link
+        .social-icon
             fill: #fff
             fill-opacity: 0.6
-            &:hover
+        &:hover
+            .social-icon
                 fill: #4e8839
                 fill-opacity: 1
 
-
+.window_wellcome
+    display: inline-block
     &__buttons
         @include clearfix
-        &-btn
-            float: left
+        .form-btn
             &:nth-child(1)
                 width: 152px
             &:nth-child(2)
-                border-left: 2px solid #dee3e7
-                border-right: 2px solid #dee3e7
                 width: 130px
             &:nth-child(3)
                 width: 98px
 
-        .btn-link
-            overflow: hidden
-            display: block
-            padding: 14px
-            background: #6c9c5a
-            @include font('roboto-med')
-            color: #fff
-            text-decoration: none
-            &:hover
-                background: #4e8839
-.window__buttons
 
-
-.window-login
+.window_login
     display: inline-block
     padding-top: 35px
-    &__title
-        text-transform: uppercase
-        font-size: 35px
-        margin: 0
-        @include font('sans')
-        font-weight: 400
-        &:after
-            content: ''
-            display: block
-            height: 3px
-            width: 90px
-            background: #fff
-            margin: 25px auto 0
-            margin-bottom: 30px
+    .main-subtitle_white
+        margin-bottom: 40px
 
     &__form
         .form__elements
-            padding: 0 20px
+            padding: 10px 20px
+            padding-bottom: 35px
             &-input
                 background: #fff
                 margin-bottom: 20px
@@ -151,29 +128,17 @@
                     border: none
                     outline: none
                     @include font('roboto-reg')
-            &-captcha
-                .form-checkbox__fake
-                    vertical-align: middle
-                    //font-size: 16px
-                    //line-height: 16px
-input[type=checkbox]
-    display: none
-input[type=checkbox] + label:before
-    font-family: FontAwesome
-    display: inline-block
-input[type=checkbox] + label:before
-    display: inline-block
-    color: #fff
-    width: 20px
-    height: 20px
-    border-radius: 3px
-    background: green
-    margin-right: 10px
-    content: " "
-
-input[type=checkbox]:checked + label:before
-    display: inline-block
-    content: "\f00c"
+    &__buttons
+        @include clearfix
+        .form-btn
+            width: 50%
+.form__text
+    display: block
+    @include font('roboto-bold')
+    font-size: 16px
+    padding: 15px 5px
+    padding-bottom: 8px
+    color: rgba(255,255,255,0.8)
 
 
 

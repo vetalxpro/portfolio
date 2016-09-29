@@ -1,49 +1,47 @@
 main.main
-    .login-button
-        a.login-link(href='#') Авторизоваться
+    .container
+        .login-button
+            a(href='#' class='login-button__link') Авторизоваться
 
-    .main-window.window-wellcome
-        .window-wellcome__photo
-            img(class='window-wellcome__photo-pic' src='img/man-photo.jpg')
-        .window-wellcome__author
-            h1.author-name= author.name
-            p.author-site= author.site
-        .window-wellcome__social
-            ul.social__list
-                each link in links
-                    li.social__list-item
-                        a(href='#' class='social-link')= link
-                            svg(class="icon-social icon-" + link)
-                                use(xlink:href="img/svg-sprites/sprite.svg#" + link)
-        .window-wellcome__buttons
-            each link in navButtons
-                .window-wellcome__buttons-btn
-                    a(href=link.href class='btn-link')= link.title
+        .window.window_wellcome
+            .window__author
+                .window__photo
+                    img(class='window__photo-pic' src='img/man-photo.jpg' alt='photo')
+                h1.window__author-name= author.name
+                span.window__text= author.site
+            .social
+                ul.social__list
+                    each link in links
+                        li.social__list-item
+                            a(href='#' class='social-link')= link
+                                svg(class="social-icon social-icon_" + link)
+                                    use(xlink:href="img/svg-sprites/sprite.svg#" + link)
+            .window_wellcome__buttons
+                each link in navButtons
+                    a(href=link.href class='form-btn form-btn_green')= link.title
 
 
-
-    .main-window.window-login
-        h2.window-login__title Авторизуйтесь
-        form.window-login__form(id='login-form' name='login-form' action='')
-            .form__elements
-                div(class='form__elements-input')
-                    i.form-input__ico.fa.fa-user
-                    input(type='text' id='name' name='name' class='form-input' placeholder='Логин')
-                div(class='form__elements-input')
-                    i.form-input__ico.fa.fa-key
-                    input(type='password' id='password' name='name' class='form-input' placeholder='Пароль')
-                div(class='form__elements-captcha')
-                    input(type='checkbox' id='isHuman' name='isHuman' class='form-checkbox')
-                    label(for='isHuman' class='form-checkbox__fake') Я человек
-
-                    p(class='form-captcha__robot') Вы точно не робот?
-                    input(type='radio' name='n')
-                    label(for='') Да
-                    input(type='radio' name='n')
-                    label(for='') Не уверен
-            .form__buttons
-                a(class='form-button button-green' href='/portfolio') На главную
-                button(type='submit' class='form-button button-green' name='login-button') Войти
+        .window.window_login
+            h2.main-subtitle.main-subtitle_white Авторизуйтесь
+            form.window_login__form(id='login-form' name='login-form' action='')
+                .form__elements
+                    div(class='form__elements-input')
+                        i.form-input__ico.fa.fa-user
+                        input(type='text' id='name' name='name' class='form-input' placeholder='Логин')
+                    div(class='form__elements-input')
+                        i.form-input__ico.fa.fa-key
+                        input(type='password' id='password' name='name' class='form-input' placeholder='Пароль')
+                    div(class='form__elements-captcha')
+                        input(type='checkbox' id='isHuman' name='isHuman' class='form__checkbox')
+                        label(for='isHuman' class='form__checkbox-label form__checkbox-label_green') Я человек
+                        span(class='form__text') Вы точно не робот?
+                        input(type='radio' name='isRobot' id='yes' class='form__radio')
+                        label(for='yes' class='form__radio-label form__radio-label_green') Да
+                        input(type='radio' name='isRobot' id='no' class='form__radio')
+                        label(for='no' class='form__radio-label form__radio-label_green') Не уверен
+                .window_login__buttons
+                    a(class='form-btn form-btn_green' href='index.html') На главную
+                    button(type='submit' class='form-btn form-btn_green' name='login-button') Войти
 
 
 

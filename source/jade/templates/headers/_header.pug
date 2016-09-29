@@ -1,27 +1,24 @@
-header.header#header
-    .container
-        .header__top
-            .social
-                ul.social__list
-                    each link in links
-                        li.social__list-item
-                            a(href='#' class='social-link')= link
-                                svg(class="icon-social icon-" + link width="30" height="30")
-                                    use(xlink:href="img/svg-sprites/sprite.svg#" + link)
-            .btn-menu
-                .btn-menu__line
-                .btn-menu__line
-                .btn-menu__line
+header.header.header_portfolio#header
+    .header__top
+        .social
+            ul.social__list
+                each link in links
+                    li.social__list-item
+                        a(href='#' class='social-link')= link
+                            svg(class="social-icon social-icon_" + link width="30" height="30")
+                                use(xlink:href="img/svg-sprites/sprite.svg#" + link)
+    a(class='btn-menu' href='#') Меню
+        .btn-menu__line
+        .btn-menu__line
+        .btn-menu__line
 
-        .header__author
-            .header__author-photo
-                img(src='img/man-photo.jpg' class='author-pic')
-            .header__author-info
-                h1.author-name= author.name
-                p.author-site= author.site
-        a.down-arrow(href='#works')
-            svg(class='icon icon-down-arrow' width="30" height="30")
-                use(xlink:href='img/svg-sprites/sprite.svg#arrow_down')
+
+    .header__author
+        .header__author-photo
+            img(src='img/man-photo.jpg' class='header__author-pic')
+        h1.header__author-name= author.name
+        span.header__text= author.site
+
 
 
 
