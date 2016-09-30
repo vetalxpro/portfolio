@@ -1,97 +1,109 @@
 .about-me
     position: relative
-    //top: -320px
-    padding-top: 150px
-    //min-height: 800px
-    background-color: #f4f5f0
-    background: url('../img/svg/about_bg_left.svg'), url('../img/svg/about_bg_right.svg')
-    background-repeat: no-repeat, no-repeat
-    background-position: 0 0, 100% 0
-    background-size: 50%, 51%
     .container
-        @include clearfix
+        display: flex
+        position: relative
+        @extend %clearfix
+        &::before
+            position: absolute
+            left: 0
+            top: -160px
+            content: ''
+            display: block
+            width: 100%
+            height: 160px
+            background-image: url('../img/svg/about_bg_left.svg'), url('../img/svg/about_bg_right.svg')
+            background-repeat: no-repeat, no-repeat
+            background-position: -2px 0, 100% 0
+            background-size: 49.7%, 51%
 
-.about-me__left
-    width: 50%
-    float: left
-    text-align: center
 
-.about-me__title
-    float: left
-    padding: 0 10px
-    width: 50%
-    text-align: center
-    .main-title
-        width: 100%
+    &__left
+        width: 49.4%
+        padding: 10px 20px
+        text-align: center
+        background-color: #ebefe2
+
+    &__main-title
+        margin-top: -80px
+        float: left
+        width: 50%
+        text-align: center
         background: url("../img/svg/about_header.svg") no-repeat 50% 50%
         background-size: 80% 80%
 
-.about-me__info
-    width: 50%
-    padding: 20px
-    float: right
-    @include clearfix
-    &-photo
-        max-width: 437px
-        max-height: 390px
-        overflow: hidden
-        margin-bottom: 40px
-    .about-me-pic
+    &__info
+        width: 50%
+        float: right
+        @extend %clearfix
+    &__photo
         width: 100%
-    .main-subtitle
+        margin-bottom: 40px
+    &__pic
+        max-width: 100%
+        height: auto
+    &__main-subtitle-left
         margin-bottom: 58px
 
-.about-me__right
-    width: 50%
-    float: left
-    padding: 20px 40px
-    text-align: center
-    .main-subtitle
-        
-        margin-bottom: 50px
+    &__text
+        color: #566358
+        font-size: 16px
+        font-weight: 400
+        text-align: left
+        margin: 0
+        padding: 10px 0
+        @include font('roboto-reg')
+
+    &__right
+        width: 50.6%
+        padding: 10px 20px
+        padding-left: 40px
+        text-align: center
+        background-color: #f4f5f0
+    &__main-subtitle-right
+        margin: 0 auto 50px
+        max-width: 350px
+    &__text-right
+        margin-bottom: 56px
 
 .skill__title
-
     color: #566358
     font-weight: 500
     @include font('roboto-med')
     font-size: 28px
 
-.skill__block
+.skill
     text-align: left
-    .skill__list
+    &__title
+        color: #566358
+        font-weight: 500
+        @include font('roboto-med')
+        font-size: 28px
+    &__list
         list-style: none
         padding: 20px 0
         margin: 0
-        &-item
+    &__list-item
+        display: inline-block
+        width: 120px
+        height: 120px
+        vertical-align: top
+        border-radius: 50%
+        border: 17px solid #77a266
+        margin-right: 40px
+        text-align: center
+        margin-bottom: 20px
+        &:before
+            content: ''
             display: inline-block
-            width: 120px
-            height: 120px
-            vertical-align: top
-            border-radius: 50%
-            border: 17px solid #77a266
-            margin-right: 40px
-            text-align: center
-            margin-bottom: 20px
-            &:before
-                content: ''
-                display: inline-block
-                vertical-align: middle
-                height: 100%
-            .skill-item__name
-                display: inline-block
-                vertical-align: middle
-                color: #4e8839
-                font-weight: 500
-                font-size: 14px
-                @include font('roboto-med')
+            vertical-align: middle
+            height: 100%
+    &__name
+        display: inline-block
+        vertical-align: middle
+        color: #4e8839
+        font-weight: 500
+        font-size: 14px
+        @include font('roboto-med')
 
 
-.about-me__text
-    color: #566358
-    font-size: 16px
-    font-weight: 400
-    text-align: left
-    margin: 0
-    padding: 10px 0
-    @include font('roboto-reg')

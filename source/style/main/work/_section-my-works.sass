@@ -1,131 +1,120 @@
 .works
-    position: relative
-    background-color: #fff
-    //top: -112px
-    //margin-bottom: -112px
     text-align: center
+    .container
+        position: relative
+        @extend %triangle
+    &__anchor
+        position: absolute
+        left: 50%
+        margin-left: -18px
+        top: -120px
 
-    .main-title
-        background: url('../img/svg/works_header.svg') no-repeat 50% 50%
+    &__main-title
+        background: url('../img/svg/works_header.svg') no-repeat center
 
-.works__slider
-    height: 750px
-    @include clearfix
-.works__slider-leftside
-    height: 100%
-    float: left
-    width: 50%
-    background-color: #ebefe2
-    padding: 15px 0
-    overflow: hidden
-    &:before
+    &__slider
+        height: 750px
+        @extend %clearfix
+.slider
+    &__leftside
         height: 100%
-        content: ''
-        display: inline-block
-        vertical-align: middle
-    .slider-text
+        float: left
+        width: 50%
+        background-color: #ebefe2
+        padding: 15px 0
         overflow: hidden
-        max-width: 50%
+        &:before
+            height: 100%
+            content: ''
+            display: inline-block
+            vertical-align: middle
+    &__slide-info
+        overflow: hidden
         text-align: center
         display: inline-block
         vertical-align: middle
-    .main-subtitle
+    &__main-subtitle
         margin-bottom: 60px
+        max-width: 500px
 
-    .slider-tech
-        margin: 0
+    &__tech
         color: #4e8839
         text-transform: uppercase
         @include font('roboto-med')
         font-weight: 500
         font-size: 16px
         margin-bottom: 60px
-    .slider-link
-        text-decoration: none
-        color: #fff
-        display:  inline-block
-        padding: 15px 20px 15px 50px
-        background: #6c9c5a url('../img/svg/link.svg') no-repeat
-        background-position: 18px 15px
-        border-radius: 25px
-        &:hover
-            background-color: #83B871
-                
+    &__link
+        display: inline-block
 
-.works__slider-rightside
-    position: relative
-    float: left
-    height: 100%
-    background-color: #e1e4d7
-    width: 50%
-    .slider__view
-        height: 525px
-        list-style: none
-        overflow: hidden
-        padding: 20px
-        margin: 0
-        &__item
-            background: #fff
-            display: block
-            height: 100%
-            text-align: center
-            overflow: hidden
-        &__pic
-            display: inline-block
-            border: none
-            max-width: 100%
-            max-height: 100%
-    .slider__preview
-        overflow: hidden
-        list-style: none
-        height: 225px
+
+    &__rightside
+        position: relative
         float: left
+        height: 100%
+        background-color: #e1e4d7
         width: 50%
-        margin: 0
-        padding: 0
 
-        &-item
-            display: block
-            height: 100%
-            overflow: hidden
-            position: relative
-            border: 1px solid #d0d0d0
-            &:after
-                content: ''
-                display: block
-                opacity: 0.7
-                background: #beb8ab
-                position: absolute
-                top: 0
-                left: 0
-                width: 100%
-                height: 100%
-        &-pic
-            display: block
-            width: 100%
-            max-height: 100%
-            border: none
-    .slider__btn
+    &__nav
         position: absolute
-        outline: none
-        background: none
         z-index: 50
         border: none
         width: 50px
         height: 50px
         bottom: 85px
         cursor: pointer
-        svg
+        &_next
+            right: 20%
+        &_prev
+            transform: rotate(180deg)
+            left: 20%
+    &__nav-icon
+        width: 100%
+        height: 100%
+        fill: #fff
+        &:hover
+            fill: #6c9c5a
+
+    &__view
+        height: 525px
+        padding: 20px
+        background-color: #e1e4d7
+    &__view-pic
+        margin: 0 auto
+        display: block
+        border: none
+        max-width: 100%
+        max-height: 100%
+    &__preview
+        margin: 0
+        padding: 0
+        list-style: none
+        height: 225px
+        float: left
+        width: 50%
+
+    &__preview-item
+        display: block
+        height: 100%
+        overflow: hidden
+        position: relative
+        border: 1px solid #d0d0d0
+        &:after
+            content: ''
+            display: block
+            opacity: 0.7
+            background: #beb8ab
+            position: absolute
+            top: 0
+            left: 0
             width: 100%
             height: 100%
-            fill: #fff
-            &:hover
-                fill: #6c9c5a
+    &__preview-pic
+        display: block
+        max-width: 100%
+        max-height: 100%
+        border: none
 
-        &.prev
-            left: 20%
-        &.next
-            right: 20%
 
 
 

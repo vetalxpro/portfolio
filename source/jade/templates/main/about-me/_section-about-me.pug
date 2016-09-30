@@ -19,31 +19,31 @@
 
 
 section.about-me
-    a.down-arrow(href='#aboutme')
-        svg(class='icon icon-down-arrow' width="30" height="30")
-            use(xlink:href='img/svg-sprites/sprite.svg#arrow_down')
     .container
+        .anchor.works__anchor
+            a.anchor__link(href='#aboutme')
+                svg(class='anchor__icon' width="30" height="30")
+                    use(xlink:href='img/svg-sprites/sprite.svg#arrow_down')
         .about-me__left
-            .about-me__title
-                h2.main-title#aboutme Обо мне
+            h2.main-title.about-me__main-title#aboutme Обо мне
             .about-me__info
-                .about-me__info-photo
-                    img(src='img/man-photo.jpg' class='about-me-pic')
+                .about-me__photo
+                    img(src='img/man-photo.jpg' class='about-me__pic')
                 .about-me__info-content
-                    h3.main-subtitle Кто я
+                    h3.main-subtitle.about-me__main-subtitle-left Кто я
                     each item in aboutMeInfo
                         p.about-me__text=item
         .about-me__right
-            h3.main-subtitle Чем я могу быть вам полезен
-            p.about-me__text= skillText
-            .skill
+            h3.main-subtitle.about-me__main-subtitle-right Чем я могу быть вам полезен
+            p.about-me__text.about-me__text-right= skillText
+            .about-me__skill
                 each skill in skills
-                    .skill__block
+                    .skill
                         span.skill__title= skill.title
                         ul.skill__list
                             each list in skill.list
                                 li.skill__list-item
-                                    span(class='skill-item__name')= list
+                                    span(class='skill__name')= list
                                     .skill-progress
 
 

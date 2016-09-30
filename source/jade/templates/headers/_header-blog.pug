@@ -1,12 +1,12 @@
 header.header.header_blog#header
     .container
         .header__top
-            .social
+            .social.header__social
                 ul.social__list
                     each link in links
                         li.social__list-item
-                            a(href='#' class='social-link')= link
-                                svg(class="social-icon social-icon_" + link)
+                            a(href='#' class='social__link social__link_' + link)= link
+                                svg(class='social__icon' width="30" height="30")
                                     use(xlink:href="img/svg-sprites/sprite.svg#" + link)
 
             a(class='btn-menu' href='#') Меню

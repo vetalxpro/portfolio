@@ -2,7 +2,14 @@
     background-color: #fff
     padding-bottom: 185px
     .container
-        @include clearfix
+        position: relative
+        @extend %clearfix
+        @extend %triangle
+    //&__anchor
+    //  position: absolute
+    //  top: -100px
+    //  left: 50%
+    //  margin-left: -18px
 
 .blog__sidebar
     padding: 10px

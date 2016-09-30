@@ -1,32 +1,33 @@
 section.works
-    a.down-arrow(href='#works')
-        svg(class='icon icon-down-arrow' width="30" height="30")
-            use(xlink:href='img/svg-sprites/sprite.svg#arrow_down')
     .container
-        h2.main-title#works Мои работы
-        .works__slider
-            .works__slider-leftside
-                .slider-text
-                    h3.main-subtitle Сайт школы онлайн образования
-                    p.slider-tech html, css, javascript
-                    a(href='#' class='slider-link') Посмотреть сайт
+        .anchor.works__anchor
+            a.anchor__link(href='#works')
+                svg(class='anchor__icon' width="30" height="30")
+                    use(xlink:href='img/svg-sprites/sprite.svg#arrow_down')
+        h2.main-title.works__main-title#works Мои работы
+        .slider.works__slider
+            .slider__leftside
+                .slider__slide-info
+                    h3.main-subtitle.slider__main-subtitle Сайт школы онлайн образования
+                    .slider__tech html, css, javascript
+                    .btn.btn_green.btn_icon_link.btn_round.btn_link.slider__link
+                        a(href='#' class='btn__link') Посмотреть сайт
 
-            .works__slider-rightside
-                button.slider__btn.next
-                    svg
+            .slider__rightside
+                .slider__nav.slider__nav_next
+                    svg.slider__nav-icon
                         use(xlink:href='img/svg-sprites/sprite.svg#portf_arrow_up')
-                button.slider__btn.prev
-                    svg
-                        use(xlink:href='img/svg-sprites/sprite.svg#portf_arrow_down')
-                ul.slider__view
-                    li.slider__view__item
-                        img(src='img/project-pic-2.jpg' class='slider__view__pic')
-                ul.slider__preview.one
+                .slider__nav.slider__nav_prev
+                    svg.slider__nav-icon
+                        use(xlink:href='img/svg-sprites/sprite.svg#portf_arrow_up')
+                .slider__view
+                    img(src='img/project-pic-2.jpg' class='slider__view-pic' alt='big-slide')
+                ul.slider__preview.slider__preview_one
                     li.slider__preview-item
                         img(src='img/project-pic-1.jpg' class='slider__preview-pic')
                     li.slider__preview-item
                         img(src='img/project-pic-3.jpg' class='slider__preview-pic')
-                ul.slider__preview.two
+                ul.slider__preview.slider__preview_two
                     li.slider__preview-item
                         img(src='img/project-pic-3.jpg' class='slider__preview-pic')
                     li.slider__preview-item

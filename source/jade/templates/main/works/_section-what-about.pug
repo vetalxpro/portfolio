@@ -66,28 +66,32 @@
 
 section.whatabout
     .container
-        h2.main-title Что обо мне говорят
-        ul.whatabout__list
-            each item in whataboutItems
-                li.whatabout__list-item
-                    .whatabout__list-photo
-                        img(src=item.pic class='whatabout-pic' alt=item.name)
-                    p.whatabout__list-content=item.text
-                    span.whatabout__list-name=item.name
-                    span.whatabout__list-job=item.job
-        .feedback
-            h3.main-subtitle Связаться со мной
-            form(action='' class='feedback__form')
-                .feedback__group-inputs
-                    .feedback-text-cont
-                        input(type='text' id='feedback-name'  class='feedback-input input-name' name='name' placeholder='Имя')
-                    .feedback-text-cont
-                        input(type='text' id='feedback-password' class='feedback-input input-email' name='email' placeholder='Email')
-                    .feedback-textarea-cont
-                        textarea(id='feddback-message' class='feedback-textarea input-message' name='message' placeholder='Ваше сообщение')
-                .feedback__group-btns
-                    button(type='submit' class='form-btn form-btn_green') Отправить
-                    button(type='reset' class='form-btn form-btn_green') Очистить
-        a.up-arrow(href='#header')
-            svg
-                use(xlink:href='img/svg-sprites/sprite.svg#arrow_down')
+        .whatabout__say
+            h2.main-title.whatabout__main-title Что обо мне говорят
+            ul.whatabout__list
+                each item in whataboutItems
+                    li.whatabout__list-item
+                        .whatabout__photo
+                            img(src=item.pic class='whatabout__pic' alt=item.name)
+                        p.whatabout__content=item.text
+                        span.whatabout__name=item.name
+                        span.whatabout__job=item.job
+
+        .whatabout__feedback
+            .window.feedback-window
+                h3.main-subtitle.feedback-window__main-subtitle Связаться со мной
+                form.form.feedback-form(action='')
+                    .form__input-elems.feedback-form__elems
+                        .form__cont-input.feedback-form__cont-input
+                            input(type='text' id='feedback-name'  class='form__input-text' name='name' placeholder='Имя')
+                        .form__cont-input.feedback-form__cont-input
+                            input(type='text' id='feedback-password' class='form__input-text' name='email' placeholder='Email')
+                        .form__cont-input.feedback-form__cont-input.feedback-form__cont-input_textarea
+                            textarea(id='feedback-message' class='form__input-textarea' name='message' placeholder='Ваше сообщение')
+                    .feedback-form__btn-elems
+                        button(type='submit' class='btn btn_green feedback-form__btn') Отправить
+                        button(type='reset' class='btn btn_green feedback-form__btn') Очистить
+            .anchor.anchor_down.whatabout__anchor
+                a.anchor__link(href='#header') Наверх
+                    svg.anchor__link-icon
+                        use(xlink:href='img/svg-sprites/sprite.svg#arrow_down')

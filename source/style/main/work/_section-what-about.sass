@@ -1,131 +1,95 @@
 
 .whatabout
-
-    padding-bottom: 185px
-    background-color: #fff
-    background-image: url('../img/list1.png'),url('../img/list2.png'),url('../img/list3.png'),url('../img/bg-about.jpg')
-    background-position: 25% 40%, 10% 10%, 90% 40%, bottom center
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat
-    background-size: auto, auto, auto, cover
-    text-align: center
     .container
-        max-width: 800px
         position: relative
-    .main-title
+        background-image: url('../img/list1.png'),url('../img/list2.png'),url('../img/list3.png'),url('../img/bg-about.jpg')
+        background-position: 25% 40%, 10% 10%, 90% 40%, bottom center
+        background-repeat: no-repeat, no-repeat, no-repeat, no-repeat
+        background-size: auto, auto, auto, cover
+        text-align: center
+        padding-bottom: 185px
+    &__main-title
         background: url('../img/svg/about_header.svg') no-repeat 50% 50%
     &__list
+        max-width: 800px
         font-size: 0
         list-style: none
-        margin: 0
+        margin: 0 auto
         padding: 0
-        &-item
-            font-size: 16px
-            display: inline-block
-            vertical-align: top
-            width: 50%
-            padding: 5px 8px
-            margin-bottom: 70px
-            background: url('../img/quote.png') no-repeat 0 40%
-        &-photo
-            border-radius: 50%
-            overflow: hidden
-            width: 77px
-            height: 77px
-            margin: 0 auto
-            background: #009688
-            margin-bottom: 20px
-            .whatabout-pic
-                display: inline-block
-                color: #fff
-                font-size: 14px
-                border: none
-                line-height: 25px
-                max-width: 100%
-                max-height: 100%
-        &-content
-            margin: 0
-            @include font('roboto-it')
-            color: #5d5a55
-            line-height: 26px
-            margin-bottom: 25px
-        &-name
-            display: block
-            margin: 0
-            text-align: center
-            margin-bottom: 10px
-            color: #4e8839
-            font-weight: 700
-            @include font('roboto-bold-it')
-        &-job
-            text-align: center
-            display: block
-            @include font('roboto-it')
-            &:before
-                display: inline
-                margin-right: 5px
-                content: '\2014'
+    &__list-item
+        font-size: 16px
+        display: inline-block
+        vertical-align: top
+        width: 50%
+        padding: 5px 8px
+        margin-bottom: 70px
+        background: url('../img/quote.png') no-repeat 0 40%
+    &__photo
+        border-radius: 50%
+        overflow: hidden
+        width: 77px
+        height: 77px
+        margin: 0 auto
+        background: #009688
+        margin-bottom: 20px
+    &__pic
+        display: inline-block
+        color: #fff
+        font-size: 14px
+        border: none
+        line-height: 25px
+        max-width: 100%
+    &__content
+        margin: 0
+        @include font('roboto-it')
+        color: #5d5a55
+        line-height: 26px
+        margin-bottom: 25px
+    &__name
+        display: block
+        margin: 0
+        text-align: center
+        margin-bottom: 5px
+        color: #4e8839
+        font-weight: 700
+        @include font('roboto-bold-it')
+    &__job
+        text-align: center
+        display: block
+        @include font('roboto-it')
+        &:before
+            display: inline
+            margin-right: 5px
+            content: '\2014'
 
-.feedback
+    &__anchor
+        position: absolute
+        left: 50%
+        margin-left: -18px
+        bottom: 250px
+
+
+
+.feedback-window
     background: rgba(218, 219, 214, 0.6)
-    width: 380px
-    margin: 0 auto
     margin-bottom: 155px
     padding-top: 32px
-    border-radius: 5px
-    overflow: hidden
-    .form-btn
+    &__main-subtitle
+        margin-bottom: 45px
+
+.feedback-form
+    &__elems
+        padding-bottom: 0
+        margin-bottom: 18px
+    &__cont-input
+        margin-bottom: 20px
+        &_textarea
+            height: 140px
+    &__btn-elems
+        @extend %clearfix
+    &__btn
+        float: left
         width: 50%
-    .main-subtitle
-        margin-bottom: 60px
-    &__group-inputs
-        padding: 0 20px
-    &-text-cont
-        height: 45px
-        background: #fff
-        margin-bottom: 20px
-        border-radius: 20px
-        overflow: hidden
-        padding: 15px 20px
-    &-input
-        color: #5d5a55
-        display: inline-block
-        width: 100%
-        border: none
-        vertical-align: middle
-        outline: none
-    &-textarea-cont
-        height: 140px
-        background: #fff
-        margin-bottom: 20px
-        border-radius: 20px
-        overflow: hidden
-        padding: 15px 20px
-    &-textarea
-        color: #5d5a55
-        width: 100%
-        border: none
-        outline: none
-        height: 100%
-        resize: none
-    &__group-btns
-        @include clearfix
-
-
-.up-arrow
-    position: absolute
-    left: 49%
-    bottom: -70px
-    width: 26px
-    height: 16px
-    cursor: pointer
-    transform: rotate(180deg)
-    opacity: 0.7
-    fill: #fff
-    &:hover
-        opacity: 1
-    svg
-        width: 100%
-        height: 100%
 
 
 

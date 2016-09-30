@@ -1,18 +1,20 @@
 .header
-    height: 790px
-    background-image: url('../img/svg/bg.svg'), url('../img/bg-forest-photo.jpg')
-    background-position: bottom, center
-    background-repeat: no-repeat, no-repeat
-    background-size: 101%,cover
+    height: 620px
+
     //margin-bottom: -112px
     .container
+        background-image: url('../img/bg-forest-photo.jpg')
+        background-position: center
+        background-repeat: no-repeat
+        background-size: cover
         height: 100%
+
     &__top
         height: 82px
         padding: 28px 30px 10px 30px
-        @include clearfix
-        .social__list
-            float: left
+        @extend %clearfix
+    &__social
+        float: left
         .social__link
             .social__icon
                 fill: #fff
@@ -64,6 +66,9 @@
 
 
 .header_blog
+    height: 450px
+    .container
+        background-position: 50% 60%
     .header__author-photo
         margin-bottom: 0
 
