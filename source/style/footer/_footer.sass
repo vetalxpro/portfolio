@@ -4,91 +4,78 @@ $footer-bg: #262626
     height: 185px
     position: relative
 
-.footer__top
-    height: 147px
-    background: rgba(55, 62, 66, 0.85)
-    .container
-        padding: 30px 0
-        @include clearfix
-    &-text
+    &__top
+        height: 147px
+        background: rgba(55, 62, 66, 0.85)
+        .container
+            padding: 25px 0
+            @include clearfix
+    &__top-text
         margin: 0
         max-width: 350px
         opacity: 0.6
         line-height: 24px
-    &-left
+    &__top-left
         float: left
         padding-left: 30px
         color: #fff
-        width: 33.33%
+        width: 600px
         text-align: left
         font-size: 16px
         @include font('roboto-light')
-    &-middle
+    &__top-middle
         padding-left: 30px
         float: left
-        width: 33.33%
+        width: 600px
         color: #fff
-        border-left: 2px solid rgba(255,255,255,0.2)
-        border-right: 2px solid rgba(255,255,255,0.2)
-        .social-link
-            .icon-social
-                fill: #fff
-                opacity: 0.6
-            &:hover
-                .icon-social
-                    fill: #fff
-                    opacity: 1
+        border-left: 1px solid rgba(255, 255, 255, 0.2)
+        border-right: 1px solid rgba(255, 255, 255, 0.2)
 
-    &-right
+        .social__list-item
+            margin-left: 20px
+            &:first-child
+                margin-left: 0
+            .social__link
+                .social__icon
+                    fill: #fff
+                    opacity: 0.6
+                &:hover
+                    .social__icon
+                        fill: #fff
+                        opacity: 1
+    &__nav
+        padding: 2px 0
+        margin: 0
+        margin-bottom: 17px
+        list-style: none
+        @include clearfix
+    &__nav-item
+        float: left
+        margin-right: 38px
+    &__nav-link
+        color: #fff
+        opacity: 0.6
+        text-decoration: none
+        @include font('roboto-bold')
+        &:hover
+            opacity: 1
+
+    &__top-right
         float: left
         padding-left: 30px
-        width: 33.33%
-        .footer-quote
-            margin: 0
-            color: #fff
-            opacity: 0.3
-            line-height: 26px
-            max-width: 490px
-            font-weight: 300
-            @include font('roboto-light-it')
-            font-style: italic
-        .footer-quote__author
-            margin: 0
-            line-height: 26px
-            @include font('roboto-bold-it')
-            color: #fff
-            opacity: 0.5
-            &:before
-                content: '\2014'
-                display: inline-block
-                margin-right: 5px
+        width: 600px
 
-.footer__bottom
-    height: 38px
-    text-align: center
-    opacity: 0.85
-    color: #fff
-    background: #6c9c5a
-    @include font('roboto-light')
-    font-size: 16px
-    font-weight: 300
-    .footer__bottom-content
-        line-height: 38px
+    &__bottom
+        height: 38px
+        text-align: center
+        opacity: 0.85
+        background: #6c9c5a
 
-.footer__nav
-    padding: 0
-    margin: 0
-    margin-bottom: 25px
-    list-style: none
-    @include clearfix
-    &-item
-        float: left
-        margin-right: 40px
-        .footer-link
-            color: #fff
-            opacity: 0.6
-            text-decoration: none
-            @include font('roboto-bold')
-            &:hover
-                opacity: 1
+    &__bottom-text
+        display: block
+        padding: 8px
+        color: #fff
+        font-size: 16px
+        font-weight: 300
+        @include font('roboto-light')
 

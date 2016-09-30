@@ -1,10 +1,5 @@
 header.header.header_blog#header
     .container
-        a(class='btn-menu' href='#') Меню
-            .btn-menu__line
-            .btn-menu__line
-            .btn-menu__line
-
         .header__top
             .social
                 ul.social__list
@@ -14,12 +9,16 @@ header.header.header_blog#header
                                 svg(class="social-icon social-icon_" + link)
                                     use(xlink:href="img/svg-sprites/sprite.svg#" + link)
 
-
-        .header__author
-            .header__author-photo
-                img(src='img/man-photo.jpg' class='header__author-pic')
-            h1.blog__title= pageTitles.blog
-            span.blog__subtitle= pageSubtitles.blog
+            a(class='btn-menu' href='#') Меню
+                .btn-menu__line
+                .btn-menu__line
+                .btn-menu__line
+        .header__bottom
+            .header__author
+                .header__author-photo
+                    img(src='img/man-photo.jpg' class='header__author-pic')
+                h1.main-title.main-title_white= pageTitles.blog
+                span.blog__subtitle= pageSubtitles.blog
 
 
 

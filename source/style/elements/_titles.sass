@@ -1,3 +1,21 @@
+//auth-button
+.auth-button
+    &__link
+        display: block
+        padding: 15px 30px
+        @include font('roboto-med')
+        font-size: 1em
+        line-height: 1
+        font-weight: 500
+        color: #fff
+        border-radius: 50px
+        border: 1px solid #fff
+        text-decoration: none
+        &:hover
+            background: #4e8839
+            border-color: #729e19
+
+
 //main title
 .main-title
     width: 500px
@@ -12,6 +30,7 @@
     position: relative
     text-transform: uppercase
     @include font('sans')
+
     &:after
         content: ''
         display: block
@@ -22,6 +41,10 @@
         margin-left: -45px
         height: 3px
         width: 90px
+    &_white
+        color: #fff
+        &:after
+            background-color: #fff
 //main subtitle
 .main-subtitle
     width: 320px
@@ -77,8 +100,8 @@
     .icon-down-arrow
         width: 100%
         height: 100%
-//forn-button
-.form-btn
+//button
+.btn
     text-decoration: none
     border: none
     background: #000
@@ -109,15 +132,14 @@
 
 //button-menu
 .btn-menu
+    float: right
     color: #000
     font-size: 0
     &:visited
         color: red
-    position: absolute
-    top: 28px
-    right: 30px
     width: 40px
     height: 35px
+    position: relative
     z-index: 1000
     cursor: pointer
     &:hover
@@ -130,78 +152,135 @@
         background-color: #fff
         &:nth-child(3)
             margin-bottom: 0
-
-//form-checkbox
-.form__checkbox
-    display: none
-.form__checkbox-label
-    display: inline-block
-    height: 20px
-    vertical-align: center
-    color: rgba(255,255,255,0.8)
-    //&:hover
-        color: rgba(255,255,255,1)
-    &::before
-        margin-right: 10px
-        cursor: pointer
-        content: ''
-        display: inline-block
-        vertical-align: text-bottom
-        width: 20px
-        height: 20px
-        background-color: #000
-        border-radius: 2px
-        background-repeat: no-repeat
-        background-position: center
-        box-shadow: inset 0 0 1px 1px rgba(0,0,0,0.2)
-    //green mod
-    &_green
+//login-form
+.form
+    &__input-elems
+        padding: 10px 20px
+        padding-bottom: 35px
+    &__cont-input
+        position: relative
+        background: #fff
+        height: 45px
+        text-align: left
+        border-radius: 40px
+        overflow: hidden
+        @include clearfix
+        padding: 12px 20px 10px 60px
         &::before
-            background-color: #6c9c5a
+            position: absolute
+            top: 0
+            left: 0
+            content: ''
+            display: block
+            width: 45px
+            height: 100%
+            background: #f0efe9
+            background-repeat: no-repeat
+            background-position: 60% 50%
+        &_login
+            &::before
+                background-image: url('../img/svg/login.svg')
+        &_password
+            &::before
+                background-image: url('../img/svg/password.svg')
 
-.form__checkbox:checked + .form__checkbox-label
-    &::before
-        background-image: url('../img/svg/check.svg')
-        background-size: 60% 60%
-
-.form__radio
-    display: none
-.form__radio-label
-    text-align: left
-    margin: 0 18px
-    position: relative
-    display: inline-block
-    height: 20px
-    vertical-align: center
-    color: rgba(255,255,255,0.8)
-    &::before
-        cursor: pointer
-        content: ''
+    &__input-text
         display: inline-block
-        vertical-align: text-bottom
-        width: 20px
-        height: 20px
-        margin-right: 10px
-        border-radius: 50%
-        background-color: #fff
-        box-shadow: inset 0 0 3px 1px rgba(0,0,0,0.4)
-    &::after
-        position: absolute
-        content: ''
+        width: 100%
+        border: none
+        outline: none
+        @include font('roboto-reg')
+    //form-checkbox
+    &__input-checkbox
         display: none
-        border-radius: 50%
-        width: 8px
-        height: 8px
-        top: 6px
-        left: 6px
-        background-color: #000
-        box-shadow: 0 0 2px 1px rgba(0,0,0,0.3)
-    //green mod
-    &_green
-        &::after
-            background-color: #6c9c5a
+    &__label-checkbox
+        display: inline-block
+        height: 20px
+        vertical-align: center
+        color: rgba(255,255,255,0.8)
+        &::before
+            margin-right: 10px
+            cursor: pointer
+            content: ''
+            display: inline-block
+            vertical-align: text-bottom
+            width: 20px
+            height: 20px
+            background-color: #000
+            border-radius: 2px
+            background-repeat: no-repeat
+            background-position: center
+            box-shadow: inset 0 0 1px 1px rgba(0,0,0,0.2)
+        //green mod
+        &_green
+            &::before
+                background-color: #6c9c5a
 
-.form__radio:checked + .form__radio-label
-    color: rgba(108, 156, 90, 0.8)
-    &::after
-        display: block
+    &__input-checkbox:checked + &__label-checkbox
+        &::before
+            background-image: url('../img/svg/check.svg')
+            background-size: 60% 60%
+
+    //form-radio
+    &__input-radio
+        display: none
+    &__label-radio
+        text-align: left
+        position: relative
+        display: inline-block
+        height: 20px
+        vertical-align: center
+        color: rgba(255,255,255,0.8)
+        &::before
+            cursor: pointer
+            content: ''
+            display: inline-block
+            vertical-align: text-bottom
+            width: 20px
+            height: 20px
+            margin-right: 10px
+            border-radius: 50%
+            background-color: #fff
+            box-shadow: inset 0 0 3px 1px rgba(0,0,0,0.4)
+        &::after
+            position: absolute
+            content: ''
+            display: none
+            border-radius: 50%
+            width: 8px
+            height: 8px
+            top: 6px
+            left: 6px
+            background-color: #000
+            box-shadow: 0 0 2px 1px rgba(0,0,0,0.3)
+        //green mod
+        &_green
+            &::after
+                background-color: #6c9c5a
+
+    &__input-radio:checked + .form__label-radio
+        color: rgba(108, 156, 90, 0.8)
+        &::after
+            display: block
+//quote
+.quote
+    margin: 0
+    &__text
+        margin: 0
+        color: #fff
+        opacity: 0.3
+        line-height: 26px
+        max-width: 490px
+        font-weight: 300
+        @include font('roboto-light-it')
+        font-style: italic
+    &__author
+        margin: 0
+        line-height: 26px
+        @include font('roboto-bold-it')
+        color: #fff
+        opacity: 0.5
+        &:before
+            content: '\2014'
+            display: inline-block
+            margin-right: 5px

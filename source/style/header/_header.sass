@@ -1,33 +1,41 @@
 .header
-    position: relative
     height: 790px
     background-image: url('../img/svg/bg.svg'), url('../img/bg-forest-photo.jpg')
     background-position: bottom, center
     background-repeat: no-repeat, no-repeat
     background-size: 101%,cover
     //margin-bottom: -112px
-
+    .container
+        height: 100%
     &__top
-        padding: 28px 30px
-        margin-bottom: 72px
+        height: 82px
+        padding: 28px 30px 10px 30px
         @include clearfix
-        .social-link
-            .social-icon
+        .social__list
+            float: left
+        .social__link
+            .social__icon
                 fill: #fff
             &:hover
-                .social-icon
+                .social__icon
                     fill: #59943a
+    &__bottom
+        text-align: center
+        height: 50%
 
 
     &__author
+        margin: 0 auto
         color: #fff
         text-align: center
+        padding-bottom: 200px
+        max-width: 800px
 
     &__author-photo
         width: 141px
         height: 141px
         margin: 0 auto
-        margin-bottom: 30px
+        margin-bottom: 20px
         border-radius: 50%
         overflow: hidden
     &__author-pic
@@ -40,7 +48,7 @@
         font-size: 35px
         font-weight: 500
         @include font('roboto-med')
-    &__text
+    &__author-text
         font-weight: 400
         font-size: 16px
         @include font('roboto-reg')
@@ -48,36 +56,26 @@
 .header_portfolio
     .header__author
         background: url('../img/svg/portfolio_header.svg')
-        background-position: 50% 30%
+        background-position: center
         background-repeat: no-repeat
-        background-size: 70%
+        background-size: 100%
+    .header__top
+        margin-bottom: 72px
+
 
 .header_blog
-    .header__author
+    .header__author-photo
+        margin-bottom: 0
+
+    .main-title
+        padding: 20px 0 50px
         background-image: url('../img/svg/blog_header.svg')
-        background-position: 50% 120%
+        background-position: center
         background-repeat: no-repeat
-        background-size: 80% 80%
+        background-size: 120% 120%
+        &::after
+            bottom: 26px
 
-
-.blog__title
-    margin: 0
-    margin-bottom: 63px
-    font-size: 63px
-    font-weight: 400
-    color: #fff
-    position: relative
-    text-transform: uppercase
-    @include font('sans')
-    &:after
-        content: ''
-        position: absolute
-        bottom: -30px
-        left: 50%
-        background-color: #fff
-        margin-left: -45px
-        height: 3px
-        width: 90px
 .blog__subtitle
     display: block
     font-size: 16px

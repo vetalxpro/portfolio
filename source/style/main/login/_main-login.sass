@@ -1,23 +1,3 @@
-.login-button
-    position: absolute
-    top: 25px
-    right: 100px
-    max-width: 180px
-    &__link
-        display: block
-        padding: 15px 30px
-        @include font('roboto-med')
-        font-size: 1em
-        line-height: 1
-        font-weight: 500
-        color: #fff
-        border-radius: 50px
-        border: 1px solid #fff
-        text-decoration: none
-        &:hover
-            background: #4e8839
-            border-color: #729e19
-
 .main
     height: 100%
     background: #6c9c5a url('../img/bg-forest-photo.jpg') no-repeat
@@ -35,6 +15,11 @@
             display: inline-block
             height: 100%
             vertical-align: middle
+    &__auth-button
+        position: absolute
+        top: 25px
+        right: 100px
+        max-width: 180px
 
 .window
     padding-top: 40px
@@ -69,22 +54,30 @@
         opacity: 0.8
         @include font('roboto-med')
         font-weight: 400
-    .social
+    &__social
         margin-bottom: 35px
-    .social-link
-        .social-icon
-            fill: #fff
-            fill-opacity: 0.6
-        &:hover
-            .social-icon
-                fill: #4e8839
-                fill-opacity: 1
+        .social__link
+            .social__icon
+                fill: #fff
+                fill-opacity: 0.6
+            &:hover
+                .social__icon
+                    fill: #4e8839
+                    fill-opacity: 1
+    &__main-subtitle
+        margin-bottom: 40px
 
-.window_wellcome
-    display: inline-block
-    &__buttons
-        @include clearfix
-        .form-btn
+    &__cont-input
+        margin-bottom: 20px
+    &__label-radio
+        margin: 0 18px
+
+
+    &_wellcome
+        display: inline-block
+        &__nav
+            @include clearfix
+        &__nav-link
             &:nth-child(1)
                 width: 152px
             &:nth-child(2)
@@ -93,52 +86,22 @@
                 width: 98px
 
 
-.window_login
-    display: inline-block
-    padding-top: 35px
-    .main-subtitle_white
-        margin-bottom: 40px
+    &_login
+        display: inline-block
+        padding-top: 35px
 
-    &__form
-        .form__elements
-            padding: 10px 20px
-            padding-bottom: 35px
-            &-input
-                background: #fff
-                margin-bottom: 20px
-                position: relative
-                height: 45px
-                text-align: left
-                border-radius: 40px
-                overflow: hidden
-                @include clearfix
-                .form-input__ico
-                    display: inline-block
-                    text-align: center
-                    line-height: 45px
-                    width: 45px
-                    height: 45px
-                    color: #c4cbcd
-                    background: #f0efe9
-                .form-input
-                    display: inline-block
-                    vertical-align: middle
-                    padding-right: 15px
-                    width: 280px
-                    border: none
-                    outline: none
-                    @include font('roboto-reg')
-    &__buttons
-        @include clearfix
-        .form-btn
+
+        &__btn-elems
+            @include clearfix
+        &__btn
             width: 50%
-.form__text
-    display: block
-    @include font('roboto-bold')
-    font-size: 16px
-    padding: 15px 5px
-    padding-bottom: 8px
-    color: rgba(255,255,255,0.8)
+        &__text
+            display: block
+            @include font('roboto-bold')
+            font-size: 16px
+            padding: 15px 5px
+            padding-bottom: 8px
+            color: rgba(255,255,255,0.8)
 
 
 

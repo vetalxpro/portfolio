@@ -1,23 +1,24 @@
 header.header.header_portfolio#header
-    .header__top
-        .social
-            ul.social__list
-                each link in links
-                    li.social__list-item
-                        a(href='#' class='social-link')= link
-                            svg(class="social-icon social-icon_" + link width="30" height="30")
-                                use(xlink:href="img/svg-sprites/sprite.svg#" + link)
-    a(class='btn-menu' href='#') Меню
-        .btn-menu__line
-        .btn-menu__line
-        .btn-menu__line
+    .container
+        .header__top
+            .social
+                ul.social__list
+                    each link in links
+                        li.social__list-item
+                            a(href='#' class='social__link social__link_'+link)= link
+                                svg(class='social__icon' width="30" height="30")
+                                    use(xlink:href="img/svg-sprites/sprite.svg#" + link)
+            a(class='btn-menu' href='#') Меню
+                .btn-menu__line
+                .btn-menu__line
+                .btn-menu__line
 
-
-    .header__author
-        .header__author-photo
-            img(src='img/man-photo.jpg' class='header__author-pic')
-        h1.header__author-name= author.name
-        span.header__text= author.site
+        .header__bottom
+            .header__author
+                .header__author-photo
+                    img(src='img/man-photo.jpg' class='header__author-pic')
+                h1.header__author-name= author.name
+                span.header__author-text= author.site
 
 
 
