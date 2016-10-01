@@ -11,6 +11,7 @@ $(document).ready(function () {
 
   });
   $('.btn-menu').on('click',function(){
+    $(this).toggleClass('btn-menu_active');
     $('.modal').toggleClass('modal_active');
   });
 

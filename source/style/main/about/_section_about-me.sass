@@ -14,12 +14,13 @@
         background-position: 0 0, 100% 0
         background-size: 50%, 50%
     .container
-        display: flex
+        //display: flex
         position: relative
         @extend %clearfix
 
 
     &__left
+        float: left
         width: 50%
         padding: 10px 20px
         text-align: center
@@ -56,6 +57,7 @@
         @include font('roboto-reg')
 
     &__right
+        float: right
         width: 50%
         padding: 10px 20px
         padding-left: 40px
