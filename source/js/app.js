@@ -13,4 +13,14 @@ $(document).ready(function () {
   $('.btn-menu').on('click',function(){
     $('.modal').toggleClass('modal_active');
   });
+
+  $('.auth__link,#wellcome').on('click',function(e){
+    $('.flipper').toggleClass('flipper_flip');
+    e.preventDefault();
+    if($(this).hasClass('auth__link')){
+      $(this).hide();
+    }else{
+      $('.auth__link').show();
+    }
+  });
 });

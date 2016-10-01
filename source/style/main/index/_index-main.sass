@@ -35,11 +35,18 @@
             height: 100%
             vertical-align: middle
 
-
-.window
-    padding-top: 40px
+.flipper
+    width: 380px
     display: inline-block
     vertical-align: middle
+    transition: 0.6s
+    transform-style: preserve-3d
+    position: relative
+    height: 420px
+.flipper_flip
+    transform: rotateY(180deg)
+.window
+    padding-top: 40px
     text-align: center
     width: 380px
     background: rgba(18, 38, 32, 0.6)
@@ -89,7 +96,12 @@
 
 
     &_wellcome
-        display: inline-block
+        backface-visibility: hidden
+        z-index: 2
+        position: absolute
+        top: 0
+        left: 0
+        //display: inline-block
         &__nav
             @extend %clearfix
         &__nav-link
@@ -103,7 +115,12 @@
 
 
     &_login
-        display: inline-block
+        transform: rotateY(180deg)
+        position: absolute
+        top: 0
+        left: 0
+        backface-visibility: hidden
+        //display: inline-block
         padding-top: 35px
 
 
