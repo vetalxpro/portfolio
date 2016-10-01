@@ -1,0 +1,21 @@
+-
+    var modalWindowLinks = [
+    {name:'Мои работы',
+    href:'works.html'},
+    {name:'Блог',
+    href:'blog.html'},
+    {name:'Обо мне',
+    href:'about-me.html'},
+    {name:'Авторизация',
+    href:'index.html'}
+
+    ]
+
+.modal
+    .modal__window
+        ul.modal__list
+            each link in modalWindowLinks
+                li.modal__list-item
+                    a.modal__link(href=link.href)= link.name
+
+

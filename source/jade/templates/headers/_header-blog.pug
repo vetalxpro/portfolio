@@ -1,6 +1,6 @@
 header.header.header_blog#header
-    .container
-        .header__top
+    .header__top
+        .container
             .social.header__social
                 ul.social__list
                     each link in links
@@ -13,12 +13,11 @@ header.header.header_blog#header
                 .btn-menu__line
                 .btn-menu__line
                 .btn-menu__line
-        .header__bottom
-            .header__author
-                .header__author-photo
-                    img(src='img/man-photo.jpg' class='header__author-pic')
-                h1.main-title.main-title_white= pageTitles.blog
-                span.blog__subtitle= pageSubtitles.blog
+    .header__author
+        .header__author-photo
+            img(src='img/man-photo.jpg' class='header__author-pic')
+        h1.main-title.main-title_white= pageTitles.blog
+        span.blog__subtitle= pageSubtitles.blog
 
 
 

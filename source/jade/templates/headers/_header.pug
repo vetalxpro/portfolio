@@ -1,6 +1,6 @@
 header.header.header_portfolio#header
-    .container
-        .header__top
+    .header__top
+        .container
             .social.header__social
                 ul.social__list
                     each link in links
@@ -13,12 +13,11 @@ header.header.header_portfolio#header
                 .btn-menu__line
                 .btn-menu__line
 
-        .header__bottom
-            .header__author
-                .header__author-photo
-                    img(src='img/man-photo.jpg' class='header__author-pic')
-                h1.header__author-name= author.name
-                .header__author-text= author.site
+    .header__author
+        .header__author-photo
+            img(src='img/man-photo.jpg' class='header__author-pic')
+        h1.header__author-name= author.name
+        .header__author-text= author.site
 
 
 

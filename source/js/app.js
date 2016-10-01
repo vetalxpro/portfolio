@@ -10,4 +10,7 @@ $(document).ready(function () {
     }
 
   });
+  $('.btn-menu').on('click',function(){
+    $('.modal').toggleClass('modal_active');
+  });
 });

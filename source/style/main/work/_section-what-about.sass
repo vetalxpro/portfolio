@@ -1,12 +1,12 @@
 
 .whatabout
+    background-image: url('../img/list1.png'), url('../img/list2.png'), url('../img/list3.png'), url('../img/bg-about.jpg')
+    background-position: 25% 40%, 10% 10%, 90% 40%, bottom center
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat
+    background-size: auto, auto, auto, cover
     .container
         position: relative
         //TODO: make sprite
-        background-image: url('../img/list1.png'),url('../img/list2.png'),url('../img/list3.png'),url('../img/bg-about.jpg')
-        background-position: 25% 40%, 10% 10%, 90% 40%, bottom center
-        background-repeat: no-repeat, no-repeat, no-repeat, no-repeat
-        background-size: auto, auto, auto, cover
         text-align: center
         padding-bottom: 185px
     &__main-title
@@ -73,12 +73,19 @@
         bottom: 250px
         &:hover
             margin-bottom: 10px
-
-
+    &__feedback
+        height: 100vh
+        text-align: center
+        &::before
+            content: ''
+            display: inline-block
+            height: 100%
+            vertical-align: middle
 
 .feedback-window
+    display: inline-block
+    vertical-align: middle
     background: rgba(218, 219, 214, 0.6)
-    margin-bottom: 155px
     padding-top: 32px
     &__main-subtitle
         margin-bottom: 45px

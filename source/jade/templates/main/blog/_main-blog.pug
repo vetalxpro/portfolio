@@ -26,10 +26,9 @@ main.blog
                 each item in content
                     li(class='blog__sidebar-item')
                         a(href='#' class='blog__sidebar-link'+item.active)= item.title
-        .blog__articles
-            ul.blog__articles-list
-                each item in content
-                    li(class='blog__articles-item')
-                        h3.blog-title=item.title
-                        span.blog__articles-time=item.date
-                        p.blog__articles-text=item.text
+        section.blog__articles
+            each item in content
+                article(class='blog__articles-item')
+                    h3.blog-title=item.title
+                    span.blog__articles-time=item.date
+                    p.blog__articles-text=item.text
