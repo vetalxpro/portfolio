@@ -10,24 +10,23 @@ section.works
                 .slider__slide-info
                     h3.main-subtitle.slider__main-subtitle Сайт школы онлайн образования
                     .slider__tech html, css, javascript
-                    .btn.btn_green.btn_icon_link.btn_round.btn_link.slider__link
-                        a(href='#' class='btn__link') Посмотреть сайт
+                    a.btn.btn_green.btn_icon_link.btn_round.slider__link(href='#') Посмотреть сайт
 
             .slider__rightside
-                .slider__nav.slider__nav_next
-                    svg.slider__nav-icon
-                        use(xlink:href='img/svg-sprites/sprite.svg#portf_arrow_up')
-                .slider__nav.slider__nav_prev
-                    svg.slider__nav-icon
-                        use(xlink:href='img/svg-sprites/sprite.svg#portf_arrow_up')
                 .slider__view
                     img(src='img/project-pic-2.jpg' class='slider__view-pic' alt='big-slide')
                 ul.slider__preview.slider__preview_one
+                    .slider__nav.slider__nav_next
+                        svg.slider__nav-icon
+                            use(xlink:href='img/svg-sprites/sprite.svg#portf_arrow_up')
                     li.slider__preview-item
                         img(src='img/project-pic-1.jpg' class='slider__preview-pic')
                     li.slider__preview-item
                         img(src='img/project-pic-3.jpg' class='slider__preview-pic')
                 ul.slider__preview.slider__preview_two
+                    .slider__nav.slider__nav_prev
+                        svg.slider__nav-icon
+                            use(xlink:href='img/svg-sprites/sprite.svg#portf_arrow_up')
                     li.slider__preview-item
                         img(src='img/project-pic-3.jpg' class='slider__preview-pic')
                     li.slider__preview-item

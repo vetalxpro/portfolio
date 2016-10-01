@@ -1,21 +1,3 @@
-//auth-button
-.auth-button
-    &__link
-        display: block
-        padding: 15px 30px
-        @include font('roboto-med')
-        font-size: 1em
-        line-height: 1
-        font-weight: 500
-        color: #fff
-        border-radius: 50px
-        border: 1px solid #fff
-        text-decoration: none
-        &:hover
-            background: #4e8839
-            border-color: #729e19
-
-
 //main title
 .main-title
     width: 500px
@@ -89,25 +71,25 @@
     width: 26px
     height: 16px
     cursor: pointer
+    opacity: 0.7
+    transition: 1s
     &__link
         display: block
         width: 100%
         height: 100%
-        opacity: 0.7
         fill: #fff
-        &:hover
-            opacity: 1
     &__link-icon
         display: block
         height: 100%
         width: 100%
+    &:hover
+        opacity: 1
     &_down
         transform: rotate(180deg)
 //button
 .btn
     text-decoration: none
     border: none
-    background-color: #000
     padding: 15px 0
     cursor: pointer
     opacity: 0.85
@@ -115,13 +97,11 @@
     font-size: 16px
     font-weight: 500
     text-align: center
-    border-left: 2px solid rgba(222, 227, 231, 0.5)
     @include font('roboto-med')
-    &:first-child
-        border-left: none
-    &:hover
-        background-color: #9e9e9e
-
+    &_border-right
+        border-right: 2px solid rgba(222, 227, 231, 0.5)
+        &:last-child
+            border-right: none
     &_round
         border-radius: 30px
     //green mod
@@ -135,14 +115,17 @@
         &:hover
             background-color: #80a0ff
     &_icon_link
+        display: block
         padding: 15px 20px 15px 50px
-        background-image: url('../img/svg/link.svg')
+        background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="19.125" height="19.125"><path fill="#FFF" d="M18.13 16.44l-1.724 1.712c-.633.633-1.488.973-2.38.973-.9 0-1.757-.352-2.39-.996L9.222 15.7c-.632-.633-.972-1.488-.972-2.38 0-.925.375-1.804 1.03-2.448l-1.03-1.03c-.645.655-1.512 1.03-2.438 1.03-.89 0-1.758-.352-2.39-.984L.982 7.454C.34 6.81 0 5.964 0 5.064c0-.89.363-1.76.996-2.38L2.72.974C3.35.34 4.206 0 5.097 0 6 0 6.855.352 7.487.996l2.415 2.426c.633.633.973 1.488.973 2.38 0 .925-.375 1.804-1.03 2.448l1.03 1.03c.645-.655 1.512-1.03 2.438-1.03.89 0 1.758.352 2.39.984l2.44 2.438c.644.645.983 1.488.983 2.39 0 .89-.364 1.758-.997 2.38zM8.31 5.005L5.894 2.578c-.21-.21-.504-.328-.797-.328s-.586.117-.797.316l-1.72 1.71c-.21.212-.328.494-.328.787 0 .305.117.586.328.797l2.438 2.438c.21.21.504.315.797.315.34 0 .61-.117.844-.363-.39-.387-.85-.715-.85-1.312 0-.62.504-1.125 1.125-1.125.597 0 .925.457 1.312.844.246-.234.387-.504.387-.855 0-.294-.117-.587-.33-.798zm8.237 8.262L14.11 10.83c-.213-.21-.506-.33-.8-.33-.34 0-.61.13-.843.376.387.387.844.715.844 1.313 0 .62-.5 1.12-1.12 1.12-.6 0-.925-.458-1.312-.845-.246.232-.387.502-.387.853 0 .293.117.586.328.797l2.414 2.428c.21.21.504.316.797.316s.585-.105.796-.305l1.724-1.71c.21-.214.328-.495.328-.788 0-.306-.116-.587-.327-.798z"/></svg>')
         background-repeat: no-repeat
         background-position: 18px 15px
+        color: #fff
+        text-decoration: none
     &_link
-        .btn__link
-            color: #fff
-            text-decoration: none
+        display: block
+        color: #fff
+        text-decoration: none
 
 
 //button-menu
@@ -198,10 +181,10 @@
                 background-position: 60% 50%
             &_login
                 &::before
-                    background-image: url('../img/svg/login.svg')
+                    background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="14.137" height="15.422"><path fill="#C4CBCD" d="M11.456 15.422H2.68c-1.596 0-2.68-.974-2.68-2.6 0-2.27.532-5.754 3.474-5.754.312 0 1.627 1.396 3.595 1.396s3.28-1.396 3.592-1.396c2.94 0 3.474 3.484 3.474 5.753 0 1.63-1.085 2.604-2.682 2.604zm-4.388-7.71c-2.13 0-3.855-1.728-3.855-3.856S4.94 0 7.068 0s3.855 1.727 3.855 3.855S9.197 7.71 7.068 7.71z"/></svg>')
             &_password
                 &::before
-                    background-image: url('../img/svg/password.svg')
+                    background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="16.897" height="15.984"><path fill="#C4CBCD" d="M15.743 12.078c-.26 0-1.074-.943-1.285-1.154l-.964.964 2.21 2.21c.18.18.28.43.28.682 0 .563-.643 1.205-1.205 1.205-.253 0-.504-.1-.685-.28L7.36 8.965c-1.055.783-2.34 1.315-3.665 1.315C1.505 10.28 0 8.766 0 6.587 0 3.293 3.293 0 6.586 0c2.18 0 3.695 1.506 3.695 3.695 0 1.325-.53 2.61-1.313 3.665l3.564 3.564.965-.964c-.21-.21-1.154-1.024-1.154-1.285 0-.23.925-1.155 1.155-1.155.08 0 .17.04.23.1.372.373 3.173 3.013 3.173 3.304 0 .23-.923 1.154-1.154 1.154zM6.426 1.928c-1.064 0-1.928.863-1.928 1.928 0 .29.07.572.19.833-.26-.123-.542-.193-.833-.193-1.064 0-1.928.863-1.928 1.928s.863 1.928 1.928 1.928 1.928-.864 1.928-1.928c0-.29-.07-.572-.19-.833.26.12.542.19.833.19 1.064 0 1.928-.862 1.928-1.927S7.49 1.928 6.426 1.928z"/></svg>')
     //input-text
     &__input-text
         display: inline-block
@@ -246,7 +229,7 @@
 
     &__input-checkbox:checked + &__label-checkbox
         &::before
-            background-image: url('../img/svg/check.svg')
+            background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="18.164" height="13.922"><path fill="#fff" d="M17.836 3.516L9.352 12l-1.594 1.594c-.21.21-.504.328-.797.328s-.584-.117-.795-.328L4.57 12 .328 7.758C.118 7.548 0 7.254 0 6.96s.117-.585.328-.796L1.922 4.57c.21-.21.504-.328.797-.328s.584.117.795.328L6.96 8.027l7.69-7.7c.21-.21.502-.327.795-.327s.586.117.797.328l1.594 1.594c.21.21.328.504.328.797s-.117.584-.328.795z"/></svg>')
             background-size: 60% 60%
 
     //radio
@@ -322,18 +305,6 @@
         top: -180px
         left: 0
         display: block
-        background-image: url('../img/svg/bg.svg')
-        background-position: top
-        background-repeat: no-repeat
-%half-triangle
-    &::before
-        content: ''
-        height: 180px
-        width: 100%
-        position: absolute
-        top: -180px
-        left: 0
-        display: block
-        background-image: url('../img/svg/bg.svg')
+        background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="2032" height="360.4"><path fill="#f8f9f5" fill-rule="evenodd" d="M2032 360.4V0L1016 173 0 0v360.4" clip-rule="evenodd"/></svg>')
         background-position: top
         background-repeat: no-repeat

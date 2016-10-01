@@ -1,3 +1,21 @@
+//auth-button
+.auth__link
+    display: block
+    padding: 15px 30px
+    @include font('roboto-med')
+    font-size: 1em
+    line-height: 1
+    font-weight: 500
+    color: #fff
+    border-radius: 50px
+    border: 1px solid #fff
+    text-decoration: none
+    position: absolute
+    top: 25px
+    right: 100px
+    &:hover
+        background: #4e8839
+        border-color: #729e19
 .main
     height: 100%
     background: #6c9c5a url('../img/bg-forest-photo.jpg') no-repeat
@@ -15,11 +33,7 @@
             display: inline-block
             height: 100%
             vertical-align: middle
-    &__auth-button
-        position: absolute
-        top: 25px
-        right: 100px
-        max-width: 180px
+
 
 .window
     padding-top: 40px
@@ -98,7 +112,6 @@
             float: left
             width: 50%
         &__text
-            display: block
             @include font('roboto-bold')
             font-size: 16px
             padding: 15px 5px
