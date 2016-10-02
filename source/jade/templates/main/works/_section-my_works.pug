@@ -1,14 +1,18 @@
 section.works
+    .triangles
+        svg.left-tr(viewBox="0 0 100 50" preserveAspectRatio="none")
+            polygon(points="0,0 100,50 0,50")
+        svg.right-tr(viewBox="0 0 100 50" preserveAspectRatio="none")
+            polygon(points="0,50 100,0 100,50")
     .anchor.works__anchor
         a.anchor__link(href='#works')
             svg(class='anchor__icon' width="30" height="30")
                 use(xlink:href='img/svg-sprites/sprite.svg#arrow_down')
-    .works__title-container
-        svg(class='works__bg')
-            use(xlink:href="img/svg-sprites/sprite.svg#works_header")
+    .container
         h2.main-title.works__main-title#works Мои работы
-    .slider.works__slider
-        .container
+            svg(class='works__bg')
+                use(xlink:href="img/svg-sprites/sprite.svg#works_header")
+        .slider.works__slider
             .slider__leftside
                 .slider__slide-info
                     h3.main-subtitle.slider__main-subtitle Сайт школы онлайн образования

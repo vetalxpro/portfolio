@@ -20,6 +20,11 @@
     }
     ]
 main.blog
+    .triangles
+        svg.left-tr(viewBox="0 0 100 50" preserveAspectRatio="none")
+            polygon(points="0,0 100,50 0,50")
+        svg.right-tr(viewBox="0 0 100 50" preserveAspectRatio="none")
+            polygon(points="0,50 100,0 100,50")
     .container
         aside.blog__sidebar
             ul(class='blog__sidebar-list')

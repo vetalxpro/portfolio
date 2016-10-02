@@ -2,19 +2,6 @@
     position: relative
     text-align: center
     background: #f8f9f5
-
-    &::before
-        position: absolute
-        left: 0
-        top: -100px
-        content: ''
-        display: block
-        width: 100%
-        height: 200px
-        background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" fill="#f8f9f5" viewBox="0 0 100 50" preserveAspectRatio="none"><polygon points="0,0 100,50 100,50 0,100"/></svg>'), svg-url('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" fill="#f8f9f5" viewBox="0 0 100 50" preserveAspectRatio="none"><polygon points="0,50 100,0 100,50 0,50"/></svg>')
-        background-repeat: no-repeat, no-repeat
-        background-position: 0 0, 100% 0
-        background-size: 50%, 50%
     .container
         @extend %clearfix
     &__anchor
@@ -24,20 +11,23 @@
         top: -120px
         &:hover
             margin-top: 10px
-    &__title-container
+    &__main-title
         position: relative
-        padding: 60px 0
+        margin-top: -120px
+        padding: 50px 0
         background-color: #f8f9f5
+        &::after
+            bottom: 20px
     &__bg
         position: absolute
         left: 0
-        top: 0
+        top: -10%
         right: 0
         margin: auto
+        height: 100%
+        width: 400px
         fill: green
         fill-opacity: 0.12
-        width: 80%
-    //&__main-title
     &__slider
         @extend %clearfix
 

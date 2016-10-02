@@ -1,25 +1,18 @@
 .about-me
     position: relative
     background: linear-gradient(to right, #ebefe2 0%,#ebefe2 50%,#f4f5f0 50%,#f4f5f0 100%)
-    &::before
-        position: absolute
-        left: 0
-        top: -100px
-        content: ''
-        display: block
-        width: 100%
-        height: 200px
-        background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" fill="#ebefe2" viewBox="0 0 100 50" preserveAspectRatio="none"><polygon points="0,0 100,50 100,50 0,50"/></svg>'), svg-url('<svg xmlns="http://www.w3.org/2000/svg" version="1.1" fill="#f4f5f0" viewBox="0 0 100 50" preserveAspectRatio="none"><polygon points="0,50 100,0 100,50 0,50"/></svg>')
-        background-repeat: no-repeat, no-repeat
-        background-position: 0 0, 100% 0
-        background-size: 50%, 50%
     .container
-        //display: flex
+        margin-top: -120px
         position: relative
         @extend %clearfix
+    .left-tr
+        fill: #ebefe2
+    .right-tr
+        fill: #f4f5f0
 
 
     &__left
+        margin-top: -120px
         position: relative
         float: left
         width: 50%
@@ -60,6 +53,7 @@
         margin: 0
         padding: 10px 0
     &__right
+        margin-top: -120px
         float: right
         width: 50%
         padding: 10px 20px
