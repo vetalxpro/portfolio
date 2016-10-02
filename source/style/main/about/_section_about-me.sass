@@ -2,7 +2,6 @@
     position: relative
     background: linear-gradient(to right, #ebefe2 0%,#ebefe2 50%,#f4f5f0 50%,#f4f5f0 100%)
     .container
-        margin-top: -120px
         position: relative
         @extend %clearfix
     .left-tr
@@ -12,7 +11,6 @@
 
 
     &__left
-        margin-top: -120px
         position: relative
         float: left
         width: 50%
@@ -21,15 +19,16 @@
         background: #ebefe2
     &__bg
         position: absolute
-        top: -60px
-        left: 0%
+        top: 0
+        left: 0
+        height: 100px
         width: 50%
         fill: green
         opacity: 0.12
 
     &__main-title
         position: relative
-        top: -20px
+        top: 0
         float: left
         width: 50%
         text-align: center
@@ -53,7 +52,6 @@
         margin: 0
         padding: 10px 0
     &__right
-        margin-top: -120px
         float: right
         width: 50%
         padding: 10px 20px
