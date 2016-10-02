@@ -2,10 +2,9 @@
 .auth__link
     display: block
     padding: 15px 30px
-    @include font('roboto-med')
+    font-weight: 500
     font-size: 1em
     line-height: 1
-    font-weight: 500
     color: #fff
     border-radius: 50px
     border: 1px solid #fff
@@ -23,7 +22,6 @@
     background-size: cover
     text-align: center
     margin-bottom: -60px
-    font-size: 16px
     line-height: 1.25
     color: #fff
     .container
@@ -71,10 +69,8 @@
         font-size: 28px
         font-weight: 500
         opacity: 0.9
-        @include font('roboto-med')
     &__text
         opacity: 0.8
-        @include font('roboto-med')
         font-weight: 400
     &__social
         margin-bottom: 35px
@@ -98,10 +94,10 @@
     &_wellcome
         backface-visibility: hidden
         z-index: 2
+        transform: rotateY(0deg)
         position: absolute
         top: 0
         left: 0
-        //display: inline-block
         &__nav
             @extend %clearfix
         &__nav-link
@@ -120,7 +116,6 @@
         top: 0
         left: 0
         backface-visibility: hidden
-        //display: inline-block
         padding-top: 35px
 
 
@@ -130,8 +125,6 @@
             float: left
             width: 50%
         &__text
-            @include font('roboto-bold')
-            font-size: 16px
             padding: 15px 5px
             padding-bottom: 8px
             color: rgba(255,255,255,0.8)

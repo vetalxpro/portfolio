@@ -3,7 +3,10 @@ section.works
         a.anchor__link(href='#works')
             svg(class='anchor__icon' width="30" height="30")
                 use(xlink:href='img/svg-sprites/sprite.svg#arrow_down')
-    h2.main-title.works__main-title#works Мои работы
+    .works__title-container
+        svg(class='works__bg')
+            use(xlink:href="img/svg-sprites/sprite.svg#works_header")
+        h2.main-title.works__main-title#works Мои работы
     .slider.works__slider
         .container
             .slider__leftside

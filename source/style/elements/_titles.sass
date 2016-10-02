@@ -1,23 +1,20 @@
 //main title
 .main-title
-    width: 500px
-    display: inline-block
     text-align: center
     margin: 0
     font-size: 63px
     line-height: 66px
     font-weight: 400
-    padding: 70px 0
     color: #373e42
     position: relative
     text-transform: uppercase
-    @include font('sans')
+    @include font('sansus')
 
     &:after
         content: ''
         display: block
         position: absolute
-        bottom: 45px
+        bottom: -30px
         left: 50%
         background-color: #373e42
         margin-left: -45px
@@ -38,7 +35,7 @@
     color: #566358
     position: relative
     text-transform: uppercase
-    @include font('sans')
+    @include font('sansus')
     &:after
         content: ''
         display: block
@@ -61,7 +58,7 @@
     margin-bottom: 28px
     color: #455a64
     font-size: 35px
-    @include font('sans')
+    @include font('sansus')
     font-weight: 400
 
 //anchor
@@ -94,10 +91,8 @@
     cursor: pointer
     opacity: 0.85
     color: #fff
-    font-size: 16px
     font-weight: 500
     text-align: center
-    @include font('roboto-med')
     &_border-right
         border-right: 2px solid rgba(222, 227, 231, 0.5)
         &:last-child
@@ -202,7 +197,6 @@
         width: 100%
         border: none
         outline: none
-        @include font('roboto-reg')
     //input-textarea
     &__input-textarea
         display: inline-block
@@ -211,14 +205,13 @@
         border: none
         outline: none
         resize: none
-        @include font('roboto-reg')
     //checkbox
     &__input-checkbox
         display: none
     &__label-checkbox
         display: inline-block
         height: 20px
-        vertical-align: center
+        vertical-align: middle
         color: rgba(255,255,255,0.8)
         &::before
             margin-right: 10px
@@ -251,7 +244,7 @@
         position: relative
         display: inline-block
         height: 20px
-        vertical-align: center
+        vertical-align: middle
         color: rgba(255,255,255,0.8)
         &::before
             cursor: pointer
@@ -271,7 +264,7 @@
             border-radius: 50%
             width: 8px
             height: 8px
-            top: 6px
+            top: 7px
             left: 6px
             background-color: #000
             box-shadow: 0 0 2px 1px rgba(0,0,0,0.3)
@@ -294,12 +287,12 @@
         line-height: 26px
         max-width: 490px
         font-weight: 300
-        @include font('roboto-light-it')
         font-style: italic
     &__author
         margin: 0
         line-height: 26px
-        @include font('roboto-bold-it')
+        font-style: italic
+        font-weight: 700
         color: #fff
         opacity: 0.5
         &:before

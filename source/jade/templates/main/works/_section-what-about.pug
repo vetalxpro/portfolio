@@ -65,19 +65,24 @@
 
 
 section.whatabout
-    .container
-        .whatabout__say
+    section.whatabout__say
+        .container
+            svg(class='whatabout__bg')
+                use(xlink:href="img/svg-sprites/sprite.svg#about_header")
             h2.main-title.whatabout__main-title Что обо мне говорят
             ul.whatabout__list
                 each item in whataboutItems
                     li.whatabout__list-item
                         .whatabout__photo
                             img(src=item.pic class='whatabout__pic' alt=item.name)
-                        p.whatabout__content=item.text
+                        blockquote.whatabout__content=item.text
                         span.whatabout__name=item.name
                         span.whatabout__job=item.job
 
-        .whatabout__feedback
+
+
+    section.whatabout__feedback
+        .container
             .window.feedback-window
                 h3.main-subtitle.feedback-window__main-subtitle Связаться со мной
                 form.form.feedback-form(action='')
