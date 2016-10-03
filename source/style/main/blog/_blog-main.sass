@@ -4,7 +4,6 @@
     padding-top: 80px
     padding-bottom: 185px
     .container
-        position: relative
         @extend %clearfix
     .triangle
         fill: #faf8f0
@@ -14,60 +13,77 @@
     //  left: 50%
     //  margin-left: -18px
 
-.blog__sidebar
-    padding: 10px
-    width: 20%
-    float: left
-.blog__sidebar-list
+    &__sidebar
+        width: 27.77%
+        float: left
+
+    &__sidebar-list
+        width: 60%
         list-style: none
         padding: 0
-        margin: 0
-.blog__sidebar-item
+        margin: 0 auto
 
+    &__sidebar-item
         text-align: right
+        padding: 15px 20px
 
-.blog__sidebar-link
-        max-width: 280px
+    &__sidebar-item_active
+        font-weight: 700
+        border-right: 3px solid #4e8839
+        .blog__sidebar-link
+            color: #4e8839
+
+    &__sidebar-link
+        width: 50px
         color: #455a64
         text-decoration: none
-        display: inline-block
-        padding: 15px 20px
         &:hover
             color: #4e8839
-.blog__sidebar-link_active
-        font-weight: 700
-        color: #4e8839
-        border-right: 3px solid #4e8839
 
-.blog__articles
-    width: 75%
-    float: right
 
-.blog__articles-list
-    list-style: none
-    padding: 0
-    margin: 0
-.blog__articles-item
-    padding: 10px
-    padding-right: 150px
-    margin-bottom: 70px
+    &__articles-container
+        width: 54.44%
+        float: left
+        padding-left: 5px
+
+.article
+    padding-bottom: 75px
+    position: relative
     &::after
         content: ''
+        position: absolute
+        left: 0
+        bottom: 0
         display: block
         height: 5px
         background: #373e42
         opacity: 0.1
         width: 70%
     &:last-child
+        margin-bottom: 50px
+        padding-bottom: 0px
         &::after
             display: none
-.blog__articles-time
-    display: block
-    padding: 5px 0
-    color: rgba(78, 136, 57, 0.7)
-    margin-bottom: 15px
-.blog__articles-text
-    color: #455a64
-    line-height: 26px
-    margin: 0
+    //blog-title
+    &__title
+        margin: 0
+        margin-bottom: 28px
+        color: #455a64
+        font-size: 35px
+        @include font('sansus')
+        font-weight: 400
+    &__date
+        display: block
+        padding: 5px 0
+        color: rgba(78, 136, 57, 0.7)
+        margin-bottom: 15px
+
+    &__text
+        color: #455a64
+        line-height: 26px
+        margin: 0
+        padding-bottom: 25px
+
+.blog__article
     margin-bottom: 70px
+
