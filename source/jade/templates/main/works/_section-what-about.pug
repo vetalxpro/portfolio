@@ -41,7 +41,7 @@
     job:'преподаватель'
     },
     {pic:'img/teacher-3.png',
-    text:'Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах! Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!',
+    text:'Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах! Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!',
     name:'Зар Захаров',
     job:'преподаватель'
     },
@@ -65,7 +65,7 @@
 
 
 section.whatabout
-    section.whatabout__say
+    .whatabout__say
         .container
             svg(class='whatabout__bg')
                 use(xlink:href="img/svg-sprites/sprite.svg#about_header")
@@ -81,11 +81,11 @@ section.whatabout
 
 
 
-    section.whatabout__feedback
+    .whatabout__feedback
         .container
             .window.feedback-window
                 h3.main-subtitle.feedback-window__main-subtitle Связаться со мной
-                form.form.feedback-form(action='')
+                form.form.feedback-form(name='feddback-form' id='feedback-form' action='/' method='POST')
                     .form__input-elems.feedback-form__elems
                         .form__cont-input.feedback-form__cont-input
                             input(type='text' id='feedback-name'  class='form__input-text' name='name' placeholder='Имя')

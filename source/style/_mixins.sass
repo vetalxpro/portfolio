@@ -1,14 +1,30 @@
+//clearfix
 %clearfix
     &:before,
     &:after
         content: ""
         display: table
-
-
     &:after
         clear: both
 
 
-
+//font
 @mixin font($type:'sans-serif')
     font-family: $type, Arial, Helvetica, Verdana, sans-serif
+
+//media-desktop
+//@mixin desktop()
+    @media screen and (max-width: 1200px)
+        @content
+//media-desktop
+//@mixin laptop()
+    @media screen and (max-width: 992px)
+        @content
+//media-tablet
+//@mixin tablet()
+    @media screen and (max-width: 768px)
+        @content
+//media-phone
+//@mixin phone()
+    @media screen and (max-width: 320px)
+        @content

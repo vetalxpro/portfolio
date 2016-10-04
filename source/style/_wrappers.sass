@@ -4,6 +4,9 @@ $container-width: 1800px
 
 html
     box-sizing: border-box
+    font-weight: 400
+    font-size: 16px
+    @include font('roboto')
 
 *, *::after, *::after
     box-sizing: inherit
@@ -18,15 +21,14 @@ body
 body
     margin: 0
     padding: 0
-    font-weight: 400
-    font-size: 16px
-    @include font('roboto')
 
 .wrapper
     min-height: 100%
     margin-bottom: -$footer-height
+    overflow: hidden
 
 
 .container
     max-width: $container-width
     margin: 0 auto
+    @extend %clearfix
