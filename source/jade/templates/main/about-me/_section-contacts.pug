@@ -15,7 +15,6 @@
     ]
 
 section.contact
-    .contact__map#map
     button.contact__toggler Скрыть контакты
     .window.contact__menu
         h3.main-subtitle.contact__main-subtitle Контакты
@@ -23,3 +22,4 @@ section.contact
             each contact in contacts
                 li(class='contact__list-item')
                     a(href=contact.href class='contact__link' + ' contact__link_' + contact.name)= contact.text
+    .contact__map#map

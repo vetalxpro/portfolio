@@ -10,18 +10,23 @@ $(document).ready(function () {
     }
 
   });
-  $('.btn-menu').on('click',function(){
+  $('.btn-menu').on('click', function () {
     $(this).toggleClass('btn-menu_active');
     $('.modal').toggleClass('modal_active');
   });
 
-  $('.auth__link,#wellcome').on('click',function(e){
+  $('.auth__link,#wellcome').on('click', function (e) {
     $('.flipper').toggleClass('flipper_flip');
     e.preventDefault();
-    if($(this).hasClass('auth__link')){
+    if ($(this).hasClass('auth__link')) {
       $(this).hide();
-    }else{
+    } else {
       $('.auth__link').show();
     }
+  });
+  $('.blog__sidebar-toggler').on('click', function () {
+    $('body').toggleClass('sidebar-push');
+    $('.blog__sidebar').toggleClass('blog__sidebar_active');
+
   });
 });

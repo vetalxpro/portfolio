@@ -19,6 +19,10 @@
         padding: 50px 0
         &::after
             bottom: 20px
+        +breakpoint(800px)
+            padding: 45px 0
+        +breakpoint(480px)
+            padding: 30px 0
     &__bg
         position: absolute
         left: 0
@@ -26,7 +30,7 @@
         right: 0
         margin: auto
         height: 100%
-        width: 400px
+        width: 60%
         fill: green
         fill-opacity: 0.12
 
@@ -34,51 +38,80 @@
     @extend %clearfix
     background: linear-gradient(to right, #ebefe2 0%, #ebefe2 50%, #e1e4d7 50%, #e1e4d7 100%)
     height: 100vh
-    .container
-        height: 100%
-    &__leftside
-        height: 100%
+    &__info
         float: left
+        height: 100%
         width: 50%
         background-color: #ebefe2
-        padding: 15px 0
-        &:before
+        text-align: center
+        transition: all 0.2s
+        &::before
             height: 100%
             content: ''
             display: inline-block
             vertical-align: middle
-    &__slide-info
+        +breakpoint(900px)
+            float: none
+            width: 100%
+            height: 27%
+            &::before
+                //display: none
+                height: 100%
+        +breakpoint(480px)
+            float: none
+            width: 100%
+            height: 39%
+
+    &__info-data
         text-align: center
         display: inline-block
         vertical-align: middle
+        transition: all 0.2s
+        width: 50%
+        +breakpoint(900px)
+            width: 95%
     &__main-subtitle
+        display: block
         margin-bottom: 60px
-        max-width: 500px
+        transition: all 0.2s
+        +breakpoint(900px)
+            font-size: 30px
+            margin-bottom: 40px
+        +breakpoint(480px)
+            font-size: 21px
 
     &__tech
         color: #4e8839
         text-transform: uppercase
         font-weight: 500
         margin-bottom: 60px
+        transition: all 0.2s
+        +breakpoint(900px)
+            margin-bottom: 38px
+        +breakpoint(480px)
+            margin-bottom: 17px
     &__link
         display: inline-block
 
-    &__rightside
-        position: relative
-        float: left
-        height: 100%
-        background-color: #e1e4d7
-        width: 50%
-
     &__view
+        float: right
+        width: 50%
         height: 80%
-        padding: 20px
         background-color: #e1e4d7
+        transition: all 0.2s
         &::before
             content: ''
             display: inline-block
             height: 100%
             vertical-align: middle
+        +breakpoint(900px)
+            float: none
+            width: 100%
+            height: 52%
+        +breakpoint(480px)
+            float: none
+            width: 100%
+            height: 46%
     &__view-pic
         margin: 0 auto
         display: inline-block
@@ -87,17 +120,29 @@
         max-width: 100%
         max-height: 100%
     &__preview
+        float: right
+        width: 50%
         position: relative
         height: 20%
+        transition: all 0.2s
         @extend %clearfix
+        +breakpoint(900px)
+            float: none
+            width: 100%
+            height: 21%
+        +breakpoint(480px)
+            float: none
+            width: 100%
+            height: 16%
+
     &__nav
         position: absolute
         z-index: 50
-        width: 50px
-        height: 50px
+        width: 44px
+        height: 28px
         top: 50%
-        margin-top: -25px
-        margin-left: -25px
+        margin-top: -14px
+        margin-left: -22px
         cursor: pointer
         transition: all 1s
         &_next

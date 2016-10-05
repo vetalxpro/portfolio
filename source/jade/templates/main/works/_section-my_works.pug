@@ -1,5 +1,4 @@
 section.works
-    include ../../elements/_modal-window
     svg.triangle(viewBox="0 0 1000 82" preserveAspectRatio="none")
         polygon.triangle__left(points="0,0 0,85 500.5,85 500.5,80")
         polygon.triangle__right(points="500,80 1000,0 1000,85 500,85")
@@ -11,34 +10,33 @@ section.works
         h2.main-title.works__main-title#works Мои работы
             svg(class='works__bg')
                 use(xlink:href="img/svg-sprites/sprite.svg#works_header")
-    .slider.works__slider
-        .container
-            .slider__leftside
-                .slider__slide-info
+        .slider.works__slider
+            .slider__view
+                img(src='img/project-pic-2.jpg' class='slider__view-pic' alt='big-slide')
+            .slider__info
+                .slider__info-data
                     h3.main-subtitle.slider__main-subtitle Сайт школы онлайн образования
                     .slider__tech html, css, javascript
                     a.btn.btn_green.btn_icon_link.btn_round.slider__link(href='#') Посмотреть сайт
 
-            .slider__rightside
-                .slider__view
-                    img(src='img/project-pic-2.jpg' class='slider__view-pic' alt='big-slide')
-                .slider__preview
-                    .slider__nav.slider__nav_next
-                        svg.slider__nav-icon
-                            use(xlink:href='img/svg-sprites/sprite.svg#portf_arrow_up')
-                    .slider__nav.slider__nav_prev
-                        svg.slider__nav-icon
-                            use(xlink:href='img/svg-sprites/sprite.svg#portf_arrow_up')
-                    ul.slider__preview-list
+            .slider__preview
+                .slider__nav.slider__nav_next
+                    svg.slider__nav-icon
+                        use(xlink:href='img/svg-sprites/sprite.svg#portf_arrow_up')
+                .slider__nav.slider__nav_prev
+                    svg.slider__nav-icon
+                        use(xlink:href='img/svg-sprites/sprite.svg#portf_arrow_up')
+                ul.slider__preview-list
 
-                        li.slider__preview-item
-                            img(src='img/project-pic-1.jpg' class='slider__preview-pic')
-                        li.slider__preview-item
-                            img(src='img/project-pic-3.jpg' class='slider__preview-pic')
-                    ul.slider__preview-list
+                    li.slider__preview-item
+                        img(src='img/project-pic-1.jpg' class='slider__preview-pic' alt='pic')
+                    li.slider__preview-item
+                        img(src='img/project-pic-3.jpg' class='slider__preview-pic' alt='pic')
+                ul.slider__preview-list
 
-                        li.slider__preview-item
-                            img(src='img/project-pic-3.jpg' class='slider__preview-pic')
-                        li.slider__preview-item
-                            img(src='img/project-pic-1.jpg' class='slider__preview-pic')
+                    li.slider__preview-item
+                        img(src='img/project-pic-3.jpg' class='slider__preview-pic' alt='pic')
+                    li.slider__preview-item
+                        img(src='img/project-pic-1.jpg' class='slider__preview-pic' alt='pic')
+    include ../../elements/_modal-window
 

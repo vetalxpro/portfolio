@@ -8,20 +8,30 @@
     position: relative
     text-transform: uppercase
     @include font('sansus')
+    transition: all 0.3s
     &::after
         content: ''
         display: block
         position: absolute
-        bottom: -25px
+        bottom: -20px
         left: 50%
         background-color: #373e42
         margin-left: -45px
         height: 3px
         width: 90px
+
     &_white
         color: #fff
         &:after
             background-color: #fff
+    +breakpoint(1250px)
+        &::after
+            bottom: -10px
+    +breakpoint(800px)
+        font-size: 49px
+    +breakpoint(480px)
+        font-size: 35px
+
 //main subtitle
 .main-subtitle
     display: block
@@ -86,6 +96,10 @@
     font-weight: 500
     text-align: center
     transition: all 0.3s
+    +breakpoint(900px)
+        padding: 12px 0
+    +breakpoint(480px)
+        padding: 10px 0
     &_border-right
         border-right: 2px solid rgba(222, 227, 231, 0.5)
         &:last-child
@@ -105,12 +119,16 @@
     &_icon_link
         display: block
         padding: 15px 20px 15px 50px
+
         background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="19.125" height="19.125"><path fill="#FFF" d="M18.13 16.44l-1.724 1.712c-.633.633-1.488.973-2.38.973-.9 0-1.757-.352-2.39-.996L9.222 15.7c-.632-.633-.972-1.488-.972-2.38 0-.925.375-1.804 1.03-2.448l-1.03-1.03c-.645.655-1.512 1.03-2.438 1.03-.89 0-1.758-.352-2.39-.984L.982 7.454C.34 6.81 0 5.964 0 5.064c0-.89.363-1.76.996-2.38L2.72.974C3.35.34 4.206 0 5.097 0 6 0 6.855.352 7.487.996l2.415 2.426c.633.633.973 1.488.973 2.38 0 .925-.375 1.804-1.03 2.448l1.03 1.03c.645-.655 1.512-1.03 2.438-1.03.89 0 1.758.352 2.39.984l2.44 2.438c.644.645.983 1.488.983 2.39 0 .89-.364 1.758-.997 2.38zM8.31 5.005L5.894 2.578c-.21-.21-.504-.328-.797-.328s-.586.117-.797.316l-1.72 1.71c-.21.212-.328.494-.328.787 0 .305.117.586.328.797l2.438 2.438c.21.21.504.315.797.315.34 0 .61-.117.844-.363-.39-.387-.85-.715-.85-1.312 0-.62.504-1.125 1.125-1.125.597 0 .925.457 1.312.844.246-.234.387-.504.387-.855 0-.294-.117-.587-.33-.798zm8.237 8.262L14.11 10.83c-.213-.21-.506-.33-.8-.33-.34 0-.61.13-.843.376.387.387.844.715.844 1.313 0 .62-.5 1.12-1.12 1.12-.6 0-.925-.458-1.312-.845-.246.232-.387.502-.387.853 0 .293.117.586.328.797l2.414 2.428c.21.21.504.316.797.316s.585-.105.796-.305l1.724-1.71c.21-.214.328-.495.328-.788 0-.306-.116-.587-.327-.798z"/></svg>')
         background-repeat: no-repeat
         background-position: 18px 15px
         color: #fff
         text-decoration: none
-        box-shadow: 0px 1px 2px 1px rgba(#000,.3)
+        box-shadow: 0 1px 2px 1px rgba(#000,.3)
+        +breakpoint(900px)
+            padding: 12px 20px 12px 50px
+            background-position: 18px 12px
     &_link
         display: block
         color: #fff
@@ -140,6 +158,9 @@
         &:nth-child(3)
             margin-bottom: 0
             transform-origin: left top
+        +breakpoint(480px)
+            margin-bottom: 7px
+            height: 3px
     &_active
         .btn-menu__line
             &:nth-child(1)
@@ -148,6 +169,9 @@
                 opacity: 0
             &:nth-child(3)
                 transform: rotate(-45deg)
+    +breakpoint(480px)
+        height: 23px
+        width: 26px
 
 //form
 .form
@@ -163,6 +187,10 @@
         overflow: hidden
         @extend %clearfix
         padding: 0 20px
+        &_textarea
+            padding-top: 10px
+            padding-bottom: 5px
+            height: 140px
         &:last-child
             margin: 0
         &_icon
@@ -297,12 +325,20 @@
 
 .triangle
     position: absolute
-    top: -155px
+    top: -160px
     left: 0
-    height: 155px
+    height: 160px
     width: 100%
     fill: #f8f9f5
-    @include breakpoint($tablet)
+    transition: all 0.5s
+    +breakpoint(1400px)
+        height: 100px
+        top: -100px
+    +breakpoint(800px)
         height: 66px
         top: -66px
+    +breakpoint(480px)
+        height: 28px
+        top: -28px
+
 

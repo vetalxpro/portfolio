@@ -27,21 +27,37 @@
         &:hover
             color: #000
             background: #eaeaea
+        +breakpoint(767px)
+            display: none
 
     &__menu
         z-index: 50
         top: 20%
         left: 50%
+        width: 380px
         margin-left: -180px
         position: absolute
         padding: 36px 40px
         background: rgba(244, 245, 240, 0.85)
+        transition: all 0.2s
+        +breakpoint(800px)
+            width: 350px
+            padding: 36px 20px
+        +breakpoint(767px)
+            position: static
+            width: 100%
+            margin-left: 0
+            background: #f7f7f7
+            text-align: center
+            //padding:
 
     &__list
         margin: 0
         padding: 0
         list-style: none
         text-align: left
+        +breakpoint(767px)
+            display: inline-block
     &__list-item
         margin-bottom: 10px
 

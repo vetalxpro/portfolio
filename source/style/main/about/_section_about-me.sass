@@ -11,6 +11,13 @@
         fill: #ebefe2
     .triangle__right
         fill: #f4f5f0
+        +breakpoint(1195px)
+            fill: #ebefe2
+    +breakpoint(1195px)
+        padding-top: 20px
+        background: #ebefe2
+    +breakpoint(480px)
+        padding-top: 30px
 
     &__left
         position: relative
@@ -19,14 +26,32 @@
         padding: 10px 20px
         text-align: center
         background: #ebefe2
+        transition: all 0.2s
+        +breakpoint(1195px)
+            float: none
+            width: 100%
+            min-height: 100vh
+            padding: 10px
+        +breakpoint(480px)
+            padding: 0
     &__bg
         position: absolute
-        top: -10px
+        top: -20px
         left: 0
         height: 100px
         width: 50%
         fill: green
         opacity: 0.12
+        +breakpoint(1195px)
+            left: 50%
+            width: 300px
+            margin-left: -150px
+        +breakpoint(800px)
+            top: -30px
+        +breakpoint(480px)
+            top: -40px
+            width: 200px
+            margin-left: -100px
 
     &__main-title
         position: relative
@@ -34,42 +59,75 @@
         float: left
         width: 50%
         text-align: center
+        transition: all 0.2s
+        +breakpoint(1195px)
+            float: none
+            width: 100%
+            margin-bottom: 45px
+        +breakpoint(480px)
+            margin-bottom: 40px
 
     &__info
         width: 50%
         float: right
+        transition: all 0.2s
         @extend %clearfix
+        +breakpoint(1195px)
+            float: none
+            width: 76%
+            margin: 0 auto
+            padding-bottom: 40px
+        +breakpoint(480px)
+            width: 100%
+            padding-bottom: 25px
+
     &__photo
         width: 100%
         margin-bottom: 40px
+        transition: all 0.2s
+        +breakpoint(480px)
+            margin-bottom: 30px
     &__pic
         max-width: 100%
         height: auto
     &__main-subtitle-left
         margin-bottom: 58px
+        +breakpoint(1300px)
+            margin-bottom: 40px
 
     &__text
         color: #566358
         text-align: left
         margin: 0
         padding: 10px 0
+        +breakpoint(480px)
+            padding: 10px
     &__right
         float: right
         width: 50%
-        padding: 10px 20px
-        padding-left: 40px
+        padding: 10px
+        padding-left: 38px
         text-align: center
         background: #f4f5f0
+        transition: all 0.2s
+        +breakpoint(1195px)
+            float: none
+            width: 100%
+            min-height: 100vh
+            padding-left: 10px
+            padding-top: 50px
+        +breakpoint(480px)
+            padding-top: 30px
     &__main-subtitle-right
-        margin: 0 auto 50px
+        margin: 0 auto 68px
         max-width: 350px
+        +breakpoint(1250px)
+            margin-bottom: 58px
+        +breakpoint(1195px)
+            margin-bottom: 35px
     &__text-right
         margin-bottom: 56px
 //TODO: skills
-.skill__title
-    color: #566358
-    font-weight: 500
-    font-size: 28px
 
 .skill
     text-align: left
@@ -77,10 +135,17 @@
         color: #566358
         font-weight: 500
         font-size: 28px
+        transition: all 0.2s
+        +breakpoint(1195px)
+            font-size: 21px
+            text-align: center
     &__list
         list-style: none
         padding: 20px 0
         margin: 0
+        font-size: 0
+        +breakpoint(1195px)
+            text-align: center
     &__list-item
         display: inline-block
         width: 120px
@@ -91,16 +156,31 @@
         margin-right: 40px
         text-align: center
         margin-bottom: 20px
+        transition: all 0.2s
         &:before
             content: ''
             display: inline-block
             vertical-align: middle
             height: 100%
+        &:last-child
+            margin-right: 0
+        +breakpoint(1430px)
+            margin-right: 36px
+            width: 110px
+            height: 110px
+        +breakpoint(580px)
+            margin-left: 18px
+            margin-right: 18px
+            &:last-child
+                margin-right: 18px
     &__name
         display: inline-block
         vertical-align: middle
         color: #4e8839
         font-weight: 500
         font-size: 14px
+        transition: all 0.2s
+        +breakpoint(1430px)
+            font-size: 13px
 
 

@@ -10,31 +10,37 @@
 @include add-gutter(1/3)
 @include add-gutter-style('split')
 
+h1
+  margin: 0
+  padding: 0
+.slider
+  height: 100vh
+  background-color: rgba(red,0.4)
+  &__info
+    float: left
+    width: 50%
+    height: 100%
+    background: green
+    +breakpoint(500px)
+      float: none
+      width: 100%
+      height: 33%
+  &__view
+    background-color: blue
+    float: right
+    width: 50%
+    height: 80%
+    +breakpoint(500px)
+      float: none
+      width: 100%
+      height: 34%
+  &__preview
+    width: 50%
+    height: 20%
+    float: left
+    background: yellow
+    +breakpoint(500px)
+      float: none
+      width: 100%
+      height: 33%
 
-.wrapper
-  //height: 100vh
-  //@extend %clearfix
-
-  +add-grid(1 2 1)
-  +add-grid(1 2 3 4 at 500px)
-  +background-grid
-  max-width: 700px
-  margin: 0 auto
-.one
-  +grid-span(1,1)
-  height: 50vh
-  background-color: rgba(red,0.5)
-  +breakpoint(500px)
-    +grid-span(1,2)
-.two
-  +grid-span(1,2)
-  height: 50vh
-  background-color: rgba(blue,0.5)
-  +breakpoint(500px)
-    +grid-span(1,3)
-.three
-  +grid-span(1,3)
-  height: 50vh
-  background-color: rgba(green,0.5)
-  +breakpoint(500px)
-    +grid-span(1,4)

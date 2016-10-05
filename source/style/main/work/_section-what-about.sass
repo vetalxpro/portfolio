@@ -22,9 +22,15 @@
         fill-opacity: 0.12
         height: 100px
         transform: scale(1.5)
+        +breakpoint(480px)
+            height: 70px
     &__main-title
         max-width: 500px
         margin: 0 auto 70px
+        +breakpoint(800px)
+            max-width: 400px
+        +breakpoint(480px)
+            max-width: 300px
     &__list
         max-width: 800px
         font-size: 0
@@ -40,6 +46,8 @@
         margin-bottom: 70px
         //TODO: make sprite
         background: url('../img/quote.png') no-repeat 0 80px
+        +breakpoint(550px)
+            width: 100%
     &__photo
         border-radius: 50%
         overflow: hidden
@@ -82,16 +90,24 @@
         position: absolute
         left: 50%
         margin-left: -18px
-        bottom: 250px
+        bottom: -110px
         &:hover
             margin-bottom: 10px
+        +breakpoint(1190px)
+            bottom: -80px
     &__feedback
         background-image: url('../img/whatabout-bg.png')
         background-repeat: no-repeat
         background-size: cover
         text-align: center
+        min-height: 100vh
+        padding-bottom: 350px
+        +breakpoint(1190px)
+            padding-bottom: 400px
+        +breakpoint(767px)
+            padding-bottom: 450px
         .container
-            height: 100vh
+            height: 100%
             &::before
                 content: ''
                 display: inline-block
@@ -104,7 +120,12 @@
     vertical-align: middle
     background: rgba(218, 219, 214, 0.6)
     padding-top: 32px
-    margin-bottom: 185px
+    //margin-bottom: 185px
+    transition: all 0.2s
+    +breakpoint(800px)
+        width: 350px
+    +breakpoint(480px)
+        width: 300px
     &__main-subtitle
         margin-bottom: 45px
 
@@ -114,8 +135,6 @@
         margin-bottom: 18px
     &__cont-input
         margin-bottom: 20px
-        &_textarea
-            height: 140px
     &__btn-elems
         @extend %clearfix
     &__btn

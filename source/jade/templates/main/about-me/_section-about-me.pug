@@ -19,7 +19,6 @@
 
 
 section.about-me
-    include ../../elements/_modal-window
     svg.triangle(viewBox="0 0 1000 82" preserveAspectRatio="none")
         polygon.triangle__left(points="0,0 0,85 500.5,85 500.5,80")
         polygon.triangle__right(points="500,80 1000,0 1000,85 500,85")
@@ -34,7 +33,7 @@ section.about-me
             h2.main-title.about-me__main-title#aboutme Обо мне
             .about-me__info
                 .about-me__photo
-                    img(src='img/man-photo.jpg' class='about-me__pic')
+                    img(src='img/man-photo.jpg' class='about-me__pic' alt='photo')
                 .about-me__info-content
                     h3.main-subtitle.about-me__main-subtitle-left Кто я
                     each item in aboutMeInfo
@@ -45,11 +44,12 @@ section.about-me
             .about-me__skill
                 each skill in skills
                     .skill
-                        span.skill__title= skill.title
+                        .skill__title= skill.title
                         ul.skill__list
                             each list in skill.list
                                 li.skill__list-item
                                     span(class='skill__name')= list
                                     .skill-progress
+    include ../../elements/_modal-window
 
 
