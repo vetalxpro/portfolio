@@ -1,40 +1,79 @@
 $footer-bg: #262626
 
 .footer
-    height: 185px
+    height: $footer-height
     position: relative
+    @include breakpoint(1190px)
+        height: 273px
+    @include breakpoint(767px)
+        height: 346px
 
     &__top
+        padding: 30px
+        padding-bottom: 0
         height: 147px
         background: rgba(55, 62, 66, 0.85)
-        .container
-            padding: 25px 0
-            @extend %clearfix
-    &__top-text
-        margin: 0
-        max-width: 350px
-        opacity: 0.6
-        line-height: 24px
+        @include breakpoint(1190px)
+            height: 235px
+            padding: 25px
+            padding-bottom: 0
+        @include breakpoint(767px)
+            height: 288px
+            padding: 0 10px
     &__top-left
         float: left
-        padding-left: 30px
+        width: 33.333%
         color: #fff
-        width: 600px
         text-align: left
         font-weight: 300
+        @include breakpoint(1190px)
+            width: 50%
+        @include breakpoint(767px)
+            float: none
+            padding: 15px 0
+            width: 100%
+    &__top-text
+        max-width: 70%
+        margin: 0
+        opacity: 0.6
+        line-height: 24px
+        font-weight: 300
+        @include breakpoint(1365px)
+            max-width: 82%
+        @include breakpoint(767px)
+            max-width: 100%
+            text-align: center
+
     &__top-middle
         padding-left: 30px
+        width: 33.333%
         float: left
-        width: 600px
         color: #fff
         border-left: 1px solid rgba(255, 255, 255, 0.2)
         border-right: 1px solid rgba(255, 255, 255, 0.2)
+        @include breakpoint(1190px)
+            width: 50%
+            border-right: none
+            margin-bottom: 30px
+        @include breakpoint(767px)
+            float: none
+            border: none
+            width: 100%
+            border-top: 1px solid rgba(255, 255, 255, 0.2)
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+            padding: 15px 0
+            padding-left: 8px
+            text-align: center
+            margin-bottom: 0
 
+    &__social
         .social__list-item
             margin-left: 20px
+            height: 22px
             &:first-child
                 margin-left: 0
             .social__link
+                height: 22px
                 .social__icon
                     fill: #fff
                     opacity: 0.6
@@ -42,15 +81,31 @@ $footer-bg: #262626
                     .social__icon
                         fill: #fff
                         opacity: 1
+        @include breakpoint(400px)
+            display: inline-block
     &__nav
         padding: 2px 0
         margin: 0
         margin-bottom: 17px
         list-style: none
         @extend %clearfix
+        text-align: center
+        font-size: 0
     &__nav-item
+        font-size: 1rem
         float: left
-        margin-right: 38px
+        margin-right: 6.66%
+        &:last-child
+            margin-right: 0
+        @include breakpoint(1365px)
+            margin-right: 3.3%
+        @include breakpoint(1190px)
+            margin-right: 3.8%
+        @include breakpoint(767px)
+            margin-right: 4%
+            float: none
+            display: inline-block
+            
     &__nav-link
         color: #fff
         opacity: 0.6
@@ -58,22 +113,50 @@ $footer-bg: #262626
         font-weight: 700
         &:hover
             opacity: 1
+        @include breakpoint(1365px)
+            font-weight: 500
 
     &__top-right
-        float: left
         padding-left: 30px
-        width: 600px
+        float: left
+        width: 33.333%
+        @include breakpoint(1190px)
+            float: none
+            width: 100%
+            clear: both
+            padding-left: 0
+    &__quote
+        @include breakpoint(767px)
+            text-align: center
+            padding-top: 10px
+
 
     &__bottom
         height: 38px
         text-align: center
         opacity: 0.85
         background: #6c9c5a
+        @include breakpoint(767px)
+            height: 58px
 
-    &__bottom-text
-        text-align: center
-        padding: 8px 0
+    &__bottom-copy
+        display: inline-block
+        line-height: 38px
+        vertical-align: middle
         color: #fff
-        font-size: 16px
         font-weight: 300
+        text-align: center
+        @include breakpoint(767px)
+            padding-top: 12px
+            line-height: 18px
+            display: block
+            //line-height: 58px
+    &__bottom-text
+        &::before
+            content: ' | '
+        @include breakpoint(767px)
+            display: block
+            text-align: center
+            &::before
+                content: ''
 

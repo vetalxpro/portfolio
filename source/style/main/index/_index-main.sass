@@ -1,7 +1,7 @@
 //auth-button
 .auth__link
     display: block
-    padding: 15px 30px
+    width: 180px
     font-weight: 500
     font-size: 1em
     line-height: 1
@@ -12,9 +12,18 @@
     position: absolute
     top: 25px
     right: 100px
+    transition: all 0.2s
     &:hover
         background: #4e8839
         border-color: #729e19
+    +breakpoint(1210px)
+        top: 20px
+        right: 20px
+    +breakpoint(650px)
+        top: 10px
+        right: 50%
+        margin-right: -90px
+
 .main
     height: 100%
     background: #6c9c5a url('../img/bg-forest-photo.jpg') no-repeat
@@ -41,12 +50,16 @@
     transform-style: preserve-3d
     position: relative
     height: 420px
+    @include breakpoint(768px)
+        width: 348px
+    @include breakpoint(380px)
+        width: 300px
 .flipper_flip
     transform: rotateY(180deg)
 .window
+    width: 100%
     padding-top: 40px
     text-align: center
-    width: 380px
     background: rgba(18, 38, 32, 0.6)
     border-radius: 5px
     overflow: hidden
@@ -103,11 +116,11 @@
         &__nav-link
             float: left
             &:nth-child(1)
-                width: 152px
+                width: 41%
             &:nth-child(2)
-                width: 130px
+                width: 34%
             &:nth-child(3)
-                width: 98px
+                width: 25%
 
 
     &_login

@@ -7,6 +7,8 @@ html
     font-weight: 400
     font-size: 16px
     @include font('roboto')
+    @include breakpoint(770px)
+        font-size: 14px
 
 *, *::after, *::after
     box-sizing: inherit
@@ -26,9 +28,14 @@ body
     min-height: 100%
     margin-bottom: -$footer-height
     overflow: hidden
+    @include breakpoint(1190px)
+        margin-bottom: -273px
+    @include breakpoint(767px)
+        margin-bottom: -346px
 
 
 .container
     max-width: $container-width
     margin: 0 auto
     @extend %clearfix
+

@@ -2,19 +2,21 @@
     position: relative
     text-align: center
     background: #f8f9f5
-    .container
-        @extend %clearfix
+    .modal__list-item:nth-child(1)
+        .modal__link
+            opacity: 1
+            &::after
+                display: block
     &__anchor
         position: absolute
         left: 50%
         margin-left: -18px
-        top: -120px
+        top: -95px
         &:hover
             margin-top: 10px
     &__main-title
         position: relative
         padding: 50px 0
-        background-color: #f8f9f5
         &::after
             bottom: 20px
     &__bg
@@ -27,10 +29,9 @@
         width: 400px
         fill: green
         fill-opacity: 0.12
-    &__slider
-        @extend %clearfix
 
 .slider
+    @extend %clearfix
     background: linear-gradient(to right, #ebefe2 0%, #ebefe2 50%, #e1e4d7 50%, #e1e4d7 100%)
     height: 100vh
     .container
@@ -39,7 +40,7 @@
         height: 100%
         float: left
         width: 50%
-        //background-color: #ebefe2
+        background-color: #ebefe2
         padding: 15px 0
         &:before
             height: 100%
@@ -66,7 +67,7 @@
         position: relative
         float: left
         height: 100%
-        //background-color: #e1e4d7
+        background-color: #e1e4d7
         width: 50%
 
     &__view

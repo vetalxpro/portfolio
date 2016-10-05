@@ -8,7 +8,7 @@ footer.footer
                     each link in navLinks
                         li.footer__nav-item
                             a(href=link.href class='footer__nav-link')= link.title
-                .social
+                .social.footer__social
                     ul.social__list
                         each link in links
                             li(class='social__list-item')
@@ -16,13 +16,14 @@ footer.footer
                                     svg(class="social__icon social__icon_" + link width="30" height="30")
                                         use(xlink:href="img/svg-sprites/sprite.svg#" + link)
             .footer__top-right
-                blockquote.quote
+                blockquote.quote.footer__quote
                     p.quote__text.
                         Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
                     span.quote__author Martin Golding
     .footer__bottom
         .container
-            .footer__bottom-text &copy; #{author.name} | Создано с любовью в LoftSchool | 2016
+            .footer__bottom-copy &copy; #{author.name}
+                span.footer__bottom-text Создано с любовью в LoftSchool | 2016
 
 
 
