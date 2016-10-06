@@ -33,12 +33,12 @@ main.blog#blog
                 use(xlink:href='img/svg-sprites/sprite.svg#arrow_down')
     .container
         aside.blog__sidebar
-            a.blog__sidebar-toggler(href='#')
+            .blog__sidebar-toggler
             ul.blog__sidebar-list
                 each item in content
                     li(class='blog__sidebar-item '+item.active)
                         a(href='#' class='blog__sidebar-link')= item.title
-        section.blog__articles-container
+        .blog__articles-container
             each item in content
                 article(class='article blog__article')
                     h3.article__title=item.title
