@@ -14,6 +14,8 @@ global.$ = {
   browserSync: require('browser-sync').create(),
   buffer: require('vinyl-buffer'),
   merge: require('merge-stream'),
+  browserify:require('browserify'),
+  source:require('vinyl-source-stream'),
   gp: require('gulp-load-plugins')()
 };
 
@@ -29,7 +31,7 @@ $.gulp.task('default', $.gulp.series(
         'sass',
         'pug',
         'js:foundation',
-        'js:process',
+        'browserify',
         'copy:image',
         'copy:fonts',
         'css:foundation'

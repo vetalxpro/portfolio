@@ -24,9 +24,15 @@ main.main
                 h2.main-subtitle.main-subtitle_white.window__main-subtitle Авторизуйтесь
                 form.form.window__form(id='login-form' name='login-form' action='/' method='POST')
                     .form__input-elems
-                        .form__cont-input.form__cont-input_icon.form__cont-input_icon_login.window__cont-input
+                        .form__cont-input.window__cont-input
+                            .form__icon
+                                svg(class='form__icon-pic' width="20" height="20")
+                                    use(xlink:href="img/svg-sprites/sprite.svg#login")
                             input(type='text' id='name' name='name' class='form__input-text form__input-text_login' placeholder='Логин')
-                        .form__cont-input.form__cont-input_icon.form__cont-input_icon_password.window__cont-input
+                        .form__cont-input.window__cont-input
+                            .form__icon
+                                svg(class='form__icon-pic' width="20" height="20")
+                                    use(xlink:href="img/svg-sprites/sprite.svg#password")
                             input(type='password' id='password' name='name' class='form__input-text form__input-text_password' placeholder='Пароль')
                         .form__cont-captcha
                             input(type='checkbox' id='isHuman' name='isHuman' class='form__input-checkbox')

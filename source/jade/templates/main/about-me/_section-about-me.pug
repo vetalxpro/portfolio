@@ -7,13 +7,13 @@
 -
     var skills = [
     {title:'Frontend',
-    list:['HTML5','CSS3','JavaScript & jQuery']
+    list:[{name:'HTML5',value:90},{name:'CSS3',value:80},{name:'JavaScript & jQuery',value:70}]
     },
     {title:'Backend',
-    list:['PHP','mySQL','Node.js & npm','Mongo.db']
+    list:[{name:'PHP',value:40},{name:'mySQL',value:60},{name:'Node.js & npm',value:75},{name:'Mongo.db',value:50}]
     },
     {title:'WorkFlow',
-    list:['Git','Gulp','Bower']
+    list:[{name:'Git',value:95},{name:'Gulp',value:80},{name:'Bower',value:90}]
     }
     ]
 
@@ -47,9 +47,12 @@ section.about-me
                         .skill__title= skill.title
                         ul.skill__list
                             each list in skill.list
-                                li.skill__list-item
-                                    span(class='skill__name')= list
-                                    .skill-progress
+                                li.skill__list-item(data-value=list.value)
+                                    svg(class='skill__svg' viewBox='0 0 100 100')
+                                        circle(cx='50' cy='50' r='50' fill='#dfdcd5')
+                                        circle(cx='50' cy='50' r='34' fill='#f4f5f0')
+                                        circle(class='skill__path' fill='transparent' stroke='#6c9c5a' stroke-width='16' cx='50' cy='50' r='42')
+                                    .skill__name= list.name
     include ../../elements/_modal-window
 
 
