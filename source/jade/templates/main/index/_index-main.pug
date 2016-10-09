@@ -28,17 +28,17 @@ main.main
                             .form__icon
                                 svg(class='form__icon-pic' width="20" height="20")
                                     use(xlink:href="img/svg-sprites/sprite.svg#login")
-                            input(type='text' id='name' name='name' class='form__input-text form__input-text_login' placeholder='Логин')
+                            input(type='text' id='name' name='name' class='form__input-text form__input-text_login' placeholder='Логин' data-content='Вы не ввели имя')
                         .form__cont-input.window__cont-input
                             .form__icon
                                 svg(class='form__icon-pic' width="20" height="20")
                                     use(xlink:href="img/svg-sprites/sprite.svg#password")
-                            input(type='password' id='password' name='name' class='form__input-text form__input-text_password' placeholder='Пароль')
+                            input(type='password' id='password' name='name' class='form__input-text form__input-text_password' placeholder='Пароль' data-content='Вы не ввели пароль')
                         .form__cont-captcha
-                            input(type='checkbox' id='isHuman' name='isHuman' class='form__input-checkbox')
+                            input(type='checkbox' id='isHuman' name='isHuman' class='form__input-checkbox' data-content='Не человек? Кто же ты?')
                             label(for='isHuman' class='form__label-checkbox  form__label-checkbox_green') Я человек
                             .window_login__text Вы точно не робот?
-                            input(type='radio' name='isRobot' id='yes' class='form__input-radio')
+                            input(type='radio' name='isRobot' id='yes' class='form__input-radio' data-content='Роботам тут не место')
                             label(for='yes' class='form__label-radio form__label-radio_green window__label-radio') Да
                             input(type='radio' name='isRobot' id='no' class='form__input-radio')
                             label(for='no' class='form__label-radio form__label-radio_green') Не уверен
