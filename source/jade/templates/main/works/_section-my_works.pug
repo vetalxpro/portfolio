@@ -1,26 +1,3 @@
--
-    var sliderItems=[
-    {src:'img/project-pic-1.jpg',
-    'data-link':'#1',
-    'data-tech':'html',
-    'data-title':'title-1'},
-    {src:'img/project-pic-2.jpg',
-    'data-link':'#2',
-    'data-tech':'css',
-    'data-title':'title-2'},
-    {src:'img/project-pic-3.jpg',
-    'data-link':'#3',
-    'data-tech':'js',
-    'data-title':'title-3'},
-    {src:'img/project-pic-2.jpg',
-    'data-link':'#4',
-    'data-tech':'gulp',
-    'data-title':'title-4'},
-    {src:'img/project-pic-1.jpg',
-    'data-link':'#5',
-    'data-tech':'mongo',
-    'data-title':'title-5'}
-    ]
 section.works
     svg.triangle(viewBox="0 0 1000 82" preserveAspectRatio="none")
         polygon.triangle__left(points="0,0 0,85 500.5,85 500.5,80")
@@ -41,12 +18,14 @@ section.works
                     h3.main-subtitle.slider__main-subtitle Сайт школы онлайн образования
                     .slider__tech html, css, javascript
                     a.btn.btn_green.btn_icon_link.btn_round.slider__link(href='#') Посмотреть сайт
+                        svg.btn-icon(height='30' width='30')
+                            use(xlink:href='img/svg-sprites/sprite.svg#link')
             .slider__preview
-                .slider__control.slider__control_down
-                    svg.slider__control-icon.slider__control-icon_down
+                a.slider__control.slider__control_down(href='#')
+                    svg.slider__control-icon.slider__control-icon_down(width='30' height='30')
                         use(xlink:href='img/svg-sprites/sprite.svg#portf_arrow_up')
-                .slider__control.slider__control_up
-                    svg.slider__control-icon.slider__control-icon_up
+                a.slider__control.slider__control_up(href='#')
+                    svg.slider__control-icon.slider__control-icon_up(width='30' height='30')
                         use(xlink:href='img/svg-sprites/sprite.svg#portf_arrow_up')
                 ul.slider__preview-list.slider__preview-list-down
                     each item,i in sliderItems

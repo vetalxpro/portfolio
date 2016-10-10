@@ -1,9 +1,22 @@
 module.exports = (function () {
-  //vars
-  var windowWidth,
-      isOpen = false,
-      lastId;
+  var sidebar = $('.blog__sidebar');
+  if (sidebar.length > 0) {
+    var windowWidth;
+    var isOpen = false;
+    var lastId;
+    var scrollTop;
+    var body = $('body');
+    var sidebarTop = sidebar.offset().top;
+    var sidebarLinks = sidebar.find('.blog__sidebar-link');
+    var scrollItems = sidebarLinks.map(function () {
+      var item = $($(this).attr("href"));
+      if (item.length) {
+        return item;
+      }
+    });
 
+    init();
+  }
   function init() {
     initEvents();
   }
@@ -25,21 +38,17 @@ module.exports = (function () {
       sidebar.removeClass('active');
       if ($(this).width() <= 783) {
         sidebar.removeClass('fixed');
+      } else {
+        checkSidebarPosition(scrollTop);
       }
       isOpen = false;
     });
     //window scroll
     $(window).on('scroll', function () {
       var $this = $(this);
-      var scrollTop = $this.scrollTop();
+      scrollTop = $this.scrollTop();
       checkSidebarPosition(scrollTop);
       activateSidebarElems(scrollTop);
-      /*if (windowWidth <= 783 && scrollTop > $this.height()) {
-        sidebar.show();
-      } else if (windowWidth > 783 && scrollTop < $this.height() && !sidebar.hasClass('active')) {
-        sidebar.hide();
-      }*/
-
 
     });
 
@@ -66,7 +75,6 @@ module.exports = (function () {
 
   function checkSidebarPosition(scrollTop) {
     if (sidebar.hasClass('fixed') && scrollTop < sidebarTop) {
-      // console.log('fixed');
       sidebar.removeClass('fixed');
     } else if (scrollTop > sidebarTop && windowWidth > 783) {
       sidebar.addClass('fixed');
@@ -88,23 +96,6 @@ module.exports = (function () {
           .parent().removeClass("active")
           .end().filter("[href='#" + id + "']").parent().addClass("active");
     }
-  }
-
-  if (window.location.pathname.indexOf('blog.html') !== -1) {
-    var
-        body = $('body'),
-        sidebar = $('.blog__sidebar'),
-        sidebarTop = sidebar.offset().top,
-        sidebarLinks = sidebar.find('.blog__sidebar-link');
-    var scrollItems = sidebarLinks.map(function () {
-      var item = $($(this).attr("href"));
-      if (item.length) {
-        return item;
-      }
-    });
-
-
-    init();
   }
 
 })();

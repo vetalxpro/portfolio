@@ -7,7 +7,7 @@ module.exports=function drawSkills(radius) {
   function findElements() {
     var skillsElems = $('.skill__list-item'),
         skillsCount = skillsElems.length;
-    for (let i = 0; i < skillsCount; i++) {
+    for (var i = 0; i < skillsCount; i++) {
       var skill = skillsElems.eq(i);
       var attr = skill.attr('data-value');
       if (attr > 100) {

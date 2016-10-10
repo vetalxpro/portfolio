@@ -2,6 +2,9 @@
 require('./modules/maps');
 
 $(function () {
+  //preloader
+  require('./modules/preloader');
+
   //skillsDraw
   require('./modules/skills')(42);
 
@@ -10,7 +13,6 @@ $(function () {
 
   //anchor scroll
   require('./modules/anchor-scroll');
-
   //slider
   require('./modules/slider');
   //blog

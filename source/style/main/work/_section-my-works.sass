@@ -36,7 +36,6 @@
 
 .slider
     @extend %clearfix
-    background: linear-gradient(to right, #ebefe2 0%, #ebefe2 50%, #e1e4d7 50%, #e1e4d7 100%)
     height: 100vh
     &__info
         float: left
@@ -55,7 +54,6 @@
             width: 100%
             height: 27%
             &::before
-                //display: none
                 height: 100%
         +breakpoint(480px)
             float: none
@@ -118,7 +116,7 @@
         vertical-align: middle
         border: none
         max-width: 100%
-        max-height: 100%
+        //max-height: 100%
     &__preview
         float: right
         width: 50%
@@ -142,23 +140,22 @@
         height: 100%
         top: 0
         cursor: pointer
-
-
         &_down
             left: 5%
         &_up
             right: 5%
         &:hover
             .slider__control-icon_down
-                top: 60%
-                fill: #6c9c5a
+                top: 70%
+                opacity: 1
 
             .slider__control-icon_up
-                top: 40%
-                fill: #6c9c5a
+                top: 30%
+                opacity: 1
 
 
     &__control-icon
+        display: block
         position: absolute
         width: 44px
         height: 28px
@@ -167,16 +164,17 @@
         margin-top: -14px
         left: 50%
         transition: all 0.8s
+        margin-left: -22px
+        user-select: none
+        opacity: 0.6
         &_down
-            margin-left: -22px
             transform: rotate(180deg)
-        &_up
-            margin-right: -22px
     &__preview-pic
         display: inline-block
         max-width: 100%
-        max-height: 100%
+        //max-height: 100%
         border: none
+        vertical-align: middle
     &__preview-list
         position: relative
         float: left
@@ -186,7 +184,6 @@
         padding: 0
         height: 100%
         overflow: hidden
-
         &:after
             content: ''
             display: block
@@ -203,28 +200,40 @@
         left: 0
         height: 100%
         width: 100%
-        border-right: 2px solid #ffffff
-        transition-duration: 0.6s
+        transition-duration: 0s
         transition-property: top, bottom
         z-index: 1
         background: #b4b4b4
+        overflow: hidden
+        &::before
+            content: ''
+            display: inline-block
+            height: 100%
+            vertical-align: middle
+
     &__preview-list-down
+        border-right: 1px solid #fff
         .slider__preview-item
             top: -100%
             &.active
+                transition-duration: 0.6s
                 top: 0
                 z-index: 10
             &.away
+                transition-duration: 0.6s
                 top: 100%
                 z-index: 1
     &__preview-list-up
+        border-left: 1px solid #fff
         .slider__preview-item
             bottom: -100%
             &.active
+                transition-duration: 0.6s
                 bottom: 0
                 z-index: 10
             &.away
                 bottom: 100%
+                transition-duration: 0.6s
                 z-index: 1
 
 
