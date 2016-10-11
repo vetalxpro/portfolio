@@ -5,11 +5,11 @@ header.header.header_blog#header
         .container
             .social.header__social
                 ul.social__list
-                    each link in links
+                    each link in socialLinks
                         li.social__list-item
-                            a(href='#' class='social__link social__link_' + link)= link
+                            a(href='#' class='social__link social__link_' + link.name)= link.name
                                 svg(class='social__icon' width="30" height="30")
-                                    use(xlink:href="img/svg-sprites/sprite.svg#" + link)
+                                    use(xlink:href="img/svg-sprites/sprite.svg#" + link.name)
 
             .btn-menu Меню
                 .btn-menu__line

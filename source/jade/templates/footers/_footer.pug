@@ -10,11 +10,11 @@ footer.footer
                             a(href=link.href class='footer__nav-link')= link.title
                 .social.footer__social
                     ul.social__list
-                        each link in links
+                        each link in socialLinks
                             li(class='social__list-item')
-                                a(href='#' class='social__link social__link_'+link)= link
-                                    svg(class="social__icon social__icon_" + link width="30" height="30")
-                                        use(xlink:href="img/svg-sprites/sprite.svg#" + link)
+                                a(href='#' class='social__link social__link_'+link.name)= link.name
+                                    svg(class="social__icon social__icon_" + link.name width="30" height="30")
+                                        use(xlink:href="img/svg-sprites/sprite.svg#" + link.name)
             .footer__top-right
                 blockquote.quote.footer__quote
                     p.quote__text.

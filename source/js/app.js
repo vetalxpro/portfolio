@@ -7,7 +7,8 @@ $(function () {
 
   //skillsDraw
   require('./modules/skills')(42);
-
+  //auth-btn
+  require('./modules/auth-button');
   //btn-menu
   require('./modules/btn-menu');
 

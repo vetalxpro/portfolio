@@ -10,11 +10,11 @@ main.main
                     .window__text= author.site
                 .social.window__social
                     ul.social__list
-                        each link in links
+                        each link in socialLinks
                             li.social__list-item
-                                a(href='#' class='social__link social__link_'+link)= link
+                                a(href='#' class='social__link social__link_'+link.name)= link.name
                                     svg(class='social__icon')
-                                        use(xlink:href="img/svg-sprites/sprite.svg#" + link)
+                                        use(xlink:href="img/svg-sprites/sprite.svg#" + link.name)
                 .window_wellcome__nav
                     each link in navButtons
                         a(href=link.href class='btn btn_green btn_border-right window_wellcome__nav-link')= link.title

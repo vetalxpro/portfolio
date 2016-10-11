@@ -2,7 +2,7 @@ module.exports=(function(){
   //btn-menu
   $('.btn-menu').on('click', function () {
     $(this).toggleClass('btn-menu_active');
-    $('.modal').toggleClass('modal_active');
+    $('.modal').slideToggle('modal_active');
   });
   //auth-button(flip)
   $('.auth__link,#wellcome').on('click', function (e) {

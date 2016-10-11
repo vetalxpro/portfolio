@@ -1,5 +1,16 @@
 module.exports = (function () {
     var $slider = $('.slider');
+    function action(downActive,upActive,reqDown,reqUp){
+        //remove active
+        downActive.removeClass('active');
+        upActive.removeClass('active');
+        //add away
+        downActive.addClass('away');
+        upActive.addClass('away');
+        //next
+        reqDown.addClass('active').trigger('next');
+        reqUp.addClass('active');
+    }
     if ($slider.length > 0) {
         var sliderInfo = require('./sliderInfo');
         var flag = true;
@@ -34,17 +45,7 @@ module.exports = (function () {
                 flag = true;
             }
         });
-        function action(downActive,upActive,reqDown,reqUp){
-            //remove active
-            downActive.removeClass('active');
-            upActive.removeClass('active');
-            //add away
-            downActive.addClass('away');
-            upActive.addClass('away');
-            //next
-            reqDown.addClass('active').trigger('next');
-            reqUp.addClass('active');
-        }
+
         //control-up
         $controlDown.on('click', function (e) {
             e.preventDefault();
