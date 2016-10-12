@@ -1,3 +1,5 @@
+.Background
+    canvas.Background-canvas
 main.main
     .container
         a(href='#' class='btn btn_link auth__link') Авторизоваться
@@ -12,7 +14,7 @@ main.main
                     ul.social__list
                         each link in socialLinks
                             li.social__list-item
-                                a(href='#' class='social__link social__link_'+link.name)= link.name
+                                a(href=link.href class='social__link social__link_'+link.name)= link.name
                                     svg(class='social__icon')
                                         use(xlink:href="img/svg-sprites/sprite.svg#" + link.name)
                 .window_wellcome__nav

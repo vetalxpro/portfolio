@@ -27,11 +27,12 @@
         width: 27.77%
         float: left
         +breakpoint(800px)
-            width: 60%
+            width: 40%
             height: 100%
             position: fixed
+            padding-top: 30%
             top: 0
-            left: -60%
+            left: -40%
             background: #6c9c5a
             z-index: 100
             &::after
@@ -49,7 +50,6 @@
 
     &__sidebar.active
         left: 0
-        //padding-top: 50px
 
     &__sidebar.fixed
         //display: block

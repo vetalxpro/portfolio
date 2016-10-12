@@ -20,8 +20,6 @@ $(function () {
   require('./modules/blog');
   //form-validation
   require('./modules/form-submit');
-  //slider
-  require('./modules/slider');
 });
 
 

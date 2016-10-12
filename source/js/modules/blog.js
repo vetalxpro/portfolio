@@ -24,9 +24,10 @@ module.exports = (function () {
   function initEvents() {
     //sidebar toggler click
     sidebar.on('click', function (e) {
+      var target = e.target;
       var $this = $(this);
       e.preventDefault();
-      if (!$this.hasClass('fixed')) {
+      if (!$this.hasClass('fixed') && target===$this[0]) {
         toggleMenu();
       }
     });
@@ -49,7 +50,8 @@ module.exports = (function () {
       scrollTop = $this.scrollTop();
       checkSidebarPosition(scrollTop);
       activateSidebarElems(scrollTop);
-
+      // var jade = scrollItems[scrollItems.length-1][0];
+      // console.log(document.documentElement.scrollHeight,$(jade).offset().top,$(jade).height(),$(window).height());
     });
 
   }
@@ -83,7 +85,7 @@ module.exports = (function () {
 
   function activateSidebarElems(scrollTop) {
     var cur = scrollItems.map(function () {
-      if ($(this).offset().top < scrollTop + 100) {
+      if ($(this).offset().top < scrollTop+120) {
         return this;
       }
     });
@@ -94,7 +96,10 @@ module.exports = (function () {
       lastId = id;
       sidebarLinks
           .parent().removeClass("active")
-          .end().filter("[href='#" + id + "']").parent().addClass("active");
+          .end()
+          .filter("[href='#" + id + "']")
+          .parent()
+          .addClass("active");
     }
   }
 

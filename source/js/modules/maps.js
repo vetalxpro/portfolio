@@ -194,12 +194,12 @@ module.exports=(function(){
         }
     ];
     function initMap() {
-        var myLatlng={lat:46.475,lng:30.735};
+        var myLatlng={lat:46.440772,lng:30.752568};
 
         var mapContainer = document.getElementById('map');
         map = new google.maps.Map(mapContainer, {
-            center: {lat: 46.478, lng: 30.741},
-            zoom: 15,
+            center: {lat: 46.440193, lng: 30.76041},
+            zoom: 16,
             zoomControl: true,
             zoomControlOptions: {
                 position: google.maps.ControlPosition.TOP_RIGHT
@@ -223,7 +223,7 @@ module.exports=(function(){
             title:'Я здесь'
         });
         marker.addListener('click', function () {
-            infowindow.open(map, marker);
+            // infowindow.open(map, marker);
         });
 
         map.setOptions({styles: style});

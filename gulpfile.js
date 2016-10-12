@@ -33,7 +33,8 @@ $.gulp.task('default', $.gulp.series(
         'browserify',
         'copy:image',
         'copy:fonts',
-        'css:foundation'
+        'css:foundation',
+        'copy:water'
     ),
     $.gulp.parallel(
         'watch',

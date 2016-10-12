@@ -12,7 +12,7 @@ footer.footer
                     ul.social__list
                         each link in socialLinks
                             li(class='social__list-item')
-                                a(href='#' class='social__link social__link_'+link.name)= link.name
+                                a(href=link.href class='social__link social__link_'+link.name)= link.name
                                     svg(class="social__icon social__icon_" + link.name width="30" height="30")
                                         use(xlink:href="img/svg-sprites/sprite.svg#" + link.name)
             .footer__top-right

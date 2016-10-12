@@ -1,5 +1,4 @@
 module.exports = (function () {
-  var $body = $('body').css('overflow','hidden');
   var path;
   var imgsTotal;
   var imgs = [];
@@ -45,7 +44,6 @@ module.exports = (function () {
   function setPercents(total, current) {
     var percent = Math.ceil(current / total * 100);
     if (percent >= 100) {
-      $body.css('overflow','auto');
       $preloader.fadeOut();
     }
     $preloaderPercents.text(percent+'%');

@@ -17,6 +17,9 @@
     &__window
         display: inline-block
         vertical-align: middle
+        animation-duration: 0.8s
+        animation-delay: 0.5s
+        //animation-fill-mode: both
     &__list
         list-style: none
         margin: 0
@@ -35,5 +38,5 @@
 
         @include breakpoint($tablet)
             font-size: 49px
-    &_active
+    &.active
         display: block

@@ -1,18 +1,35 @@
 module.exports=(function(){
   //btn-menu
-  $('.btn-menu').on('click', function () {
-    $(this).toggleClass('btn-menu_active');
-    $('.modal').slideToggle('modal_active');
-  });
-  //auth-button(flip)
-  $('.auth__link,#wellcome').on('click', function (e) {
-    var $this = $(this);
-    $('.flipper').toggleClass('flipper_flip');
-    e.preventDefault();
-    if ($this.hasClass('auth__link')) {
-      $this.hide();
-    } else {
-      $('.auth__link').show();
-    }
-  });
+  var $modal = $('.modal');
+  if($modal.length){
+    // var $modalWindow=$('.modal__window');
+    var flag=true;
+    var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+    $('.btn-menu').on('click', function () {
+      if(flag){
+        flag=false;
+        var $btnMenu=$(this);
+        // $modalWindow.toggleClass('rubberBand');
+        if($btnMenu.hasClass('active')){
+          $('body').css('overflow','auto');
+          $btnMenu.removeClass('active');
+          $modal.addClass('fadeOutRight').one(animationEnd,function(){
+            $(this).removeClass('active fadeOutRight');
+            flag=true;
+
+          });
+        }else{
+          $btnMenu.addClass('active');
+          $('body').css('overflow','hidden');
+          $modal.addClass('active fadeInRight').one(animationEnd,function(){
+            $(this).removeClass('fadeInRight');
+            flag=true;
+          });
+        }
+      }
+    });
+    $modal.on('click',function(){
+      $('modal__window').toggleClass('rubberBand');
+    });
+  }
 })();

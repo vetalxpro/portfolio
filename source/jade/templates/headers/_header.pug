@@ -7,7 +7,7 @@ header.header.header_portfolio#header
                 ul.social__list
                     each link in socialLinks
                         li.social__list-item
-                            a(href='#' class='social__link social__link_'+link.name)= link.name
+                            a(href=link.href class='social__link social__link_'+link.name)= link.name
                                 svg(class='social__icon' width="30" height="30")
                                     use(xlink:href="img/svg-sprites/sprite.svg#" + link.name)
             .btn-menu Меню

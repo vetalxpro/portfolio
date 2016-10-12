@@ -97,11 +97,6 @@
         height: 80%
         background-color: #e1e4d7
         transition: all 0.2s
-        &::before
-            content: ''
-            display: inline-block
-            height: 100%
-            vertical-align: middle
         +breakpoint(900px)
             float: none
             width: 100%
@@ -110,13 +105,24 @@
             float: none
             width: 100%
             height: 46%
+    &__view-big
+        position: relative
+        width: 100%
+        height: 100%
+        transition-property: opacity
+        transition-duration: 0.6s
+        opacity: 1
+        &.pic-away
+            opacity: 0
     &__view-pic
-        margin: 0 auto
-        display: inline-block
-        vertical-align: middle
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: 0
+        display: block
         border: none
         max-width: 100%
-        //max-height: 100%
+        max-height: 100%
     &__preview
         float: right
         width: 50%
@@ -155,7 +161,7 @@
 
 
     &__control-icon
-        display: block
+        //display: block
         position: absolute
         width: 44px
         height: 28px
@@ -163,16 +169,15 @@
         top: 50%
         margin-top: -14px
         left: 50%
-        transition: all 0.8s
+        transition: top 0.8s
         margin-left: -22px
-        user-select: none
         opacity: 0.6
         &_down
             transform: rotate(180deg)
     &__preview-pic
         display: inline-block
         max-width: 100%
-        //max-height: 100%
+        max-height: 100%
         border: none
         vertical-align: middle
     &__preview-list
@@ -212,7 +217,7 @@
             vertical-align: middle
 
     &__preview-list-down
-        border-right: 1px solid #fff
+        //border-right: 1px solid #fff
         .slider__preview-item
             top: -100%
             &.active
@@ -224,7 +229,7 @@
                 top: 100%
                 z-index: 1
     &__preview-list-up
-        border-left: 1px solid #fff
+        //border-left: 1px solid #fff
         .slider__preview-item
             bottom: -100%
             &.active

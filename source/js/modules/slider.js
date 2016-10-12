@@ -1,5 +1,6 @@
 module.exports = (function () {
     var $slider = $('.slider');
+
     function action(downActive,upActive,reqDown,reqUp){
         //remove active
         downActive.removeClass('active');
@@ -21,6 +22,8 @@ module.exports = (function () {
         var $upList = $slider.find('.slider__preview-list-up');
         var $controlDown = $slider.find('.slider__control_down');
         var $controlUp = $slider.find('.slider__control_up');
+        var $viewBig = $slider.find('.slider__view-big');
+
 
         //down items
         var $downItems = $downList.find('.slider__preview-item');
@@ -32,7 +35,7 @@ module.exports = (function () {
         sliderInfo.fill($downItems.eq(0));
         //fill info on slidemove
         $downList.on('next', '.active', function (e) {
-            sliderInfo.fill($downItems.eq(downCounter));
+            $viewBig.addClass('pic-away');
         });
 
         $slider.on('transitionend', '.away', function (e) {
@@ -43,6 +46,9 @@ module.exports = (function () {
             if (awayCounter === 2) {
                 awayCounter = 0;
                 flag = true;
+
+                sliderInfo.fill($downItems.eq(downCounter));
+                $viewBig.removeClass('pic-away');
             }
         });
 
