@@ -2,7 +2,7 @@ module.exports=(function(){
   //btn-menu
   var $modal = $('.modal');
   if($modal.length){
-    // var $modalWindow=$('.modal__window');
+    var scrollWidth = window.innerWidth -document.body.offsetWidth;
     var flag=true;
     var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
     $('.btn-menu').on('click', function () {
@@ -11,7 +11,7 @@ module.exports=(function(){
         var $btnMenu=$(this);
         // $modalWindow.toggleClass('rubberBand');
         if($btnMenu.hasClass('active')){
-          $('body').css('overflow','auto');
+          $('body').css({'overflow':'auto','padding-right':0});
           $btnMenu.removeClass('active');
           $modal.addClass('fadeOutRight').one(animationEnd,function(){
             $(this).removeClass('active fadeOutRight');
@@ -20,7 +20,7 @@ module.exports=(function(){
           });
         }else{
           $btnMenu.addClass('active');
-          $('body').css('overflow','hidden');
+          $('body').css({'overflow':'hidden','padding-right':scrollWidth+'px'});
           $modal.addClass('active fadeInRight').one(animationEnd,function(){
             $(this).removeClass('fadeInRight');
             flag=true;

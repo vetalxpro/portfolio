@@ -1,7 +1,6 @@
 .blog
     position: relative
     background-color: #faf8f0
-    padding-top: 80px
     padding-bottom: 185px
     +breakpoint(1190px)
         padding-bottom: 273px
@@ -21,18 +20,17 @@
       margin-left: -18px
 
     &__sidebar
+        padding-top: 80px
         position: relative
-        transition-timing-function: cubic-bezier(0.7,0,0.3,1)
-        transition: left 0.8s
+        transition: left 0.8s ease
         width: 27.77%
         float: left
         +breakpoint(800px)
-            width: 40%
+            width: 50%
             height: 100%
             position: fixed
-            padding-top: 30%
             top: 0
-            left: -40%
+            left: -50%
             background: #6c9c5a
             z-index: 100
             &::after
@@ -49,13 +47,12 @@
                 cursor: pointer
 
     &__sidebar.active
-        left: 0
+        +breakpoint(800px)
+            left: 0
 
     &__sidebar.fixed
-        //display: block
         position: fixed
-        top: 50px
-        left: 0
+        top: 0
 
     &__sidebar-list
         list-style: none
@@ -94,12 +91,14 @@
                 color: #fff
 
     &__articles-container
+        padding-top: 80px
         margin-left: 33%
         width: 54.44%
         +breakpoint(800px)
             width: 100%
             margin: 0
             padding: 0 30px
+            padding-top: 80px
 
 .article
     padding-bottom: 75px

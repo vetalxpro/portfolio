@@ -6,14 +6,10 @@ module.exports=(function(){
   var techContainer = sliderInfo.find('.slider__tech');
   var linkContainer = sliderInfo.find('.slider__link');
   var fill = function(element){
-    var title = element.data('title');
-    var tech=element.data('tech');
-    var link = element.data('link');
-    var picSrc=element.data('pic');
-    titleContainer.text(title);
-    techContainer.text(tech);
-    linkContainer.attr('href',link);
-    sliderView.attr('src',picSrc);
+    titleContainer.text(element.data('title'));
+    techContainer.text(element.data('tech'));
+    linkContainer.attr('href',element.data('link'));
+    sliderView.attr('src',element.data('pic'));
   };
   return {
     fill:fill

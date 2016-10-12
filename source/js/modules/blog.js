@@ -34,14 +34,14 @@ module.exports = (function () {
 
 
     //window size
-    $(window).on('resize load', function () {
-      windowWidth = $(this).width();
+    $(window).on('resize', function () {
+      // windowWidth = $(this).width();
       sidebar.removeClass('active');
-      if ($(this).width() <= 783) {
-        sidebar.removeClass('fixed');
-      } else {
+      // if ($(this).width() <= 783) {
+      //   sidebar.removeClass('fixed');
+      // } else {
         checkSidebarPosition(scrollTop);
-      }
+      // }
       isOpen = false;
     });
     //window scroll
@@ -78,7 +78,7 @@ module.exports = (function () {
   function checkSidebarPosition(scrollTop) {
     if (sidebar.hasClass('fixed') && scrollTop < sidebarTop) {
       sidebar.removeClass('fixed');
-    } else if (scrollTop > sidebarTop && windowWidth > 783) {
+    } else if(scrollTop > sidebarTop) {
       sidebar.addClass('fixed');
     }
   }
