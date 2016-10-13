@@ -1,5 +1,4 @@
-module.exports = (function () {
-  //form-validation
+module.exports = function () {
   var formValidation = require('./form-validation');
   formValidation.init();
   var $form = $('#login-form,#feedback-form');
@@ -33,4 +32,4 @@ module.exports = (function () {
   }
 
 
-})();
+};

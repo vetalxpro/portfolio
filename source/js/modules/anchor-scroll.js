@@ -1,4 +1,4 @@
-module.exports=(function(){
+module.exports=function(){
   $('.anchor__link,.blog__sidebar-link').on('click', function (e) {
     e.preventDefault();
     var targetElem = $($(this).attr('href'));
@@ -6,5 +6,5 @@ module.exports=(function(){
       $('html,body').animate({scrollTop: targetElem.offset().top}, 800);
     }
   });
-})();
+};
 

@@ -1,4 +1,4 @@
-module.exports=(function(){
+module.exports=function(){
   //auth-button(flip)
   $('.auth__link,#wellcome').on('click', function (e) {
     var $this = $(this);
@@ -10,4 +10,4 @@ module.exports=(function(){
       $('.auth__link').show();
     }
   });
-})();
+};

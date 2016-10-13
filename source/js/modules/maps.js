@@ -1,4 +1,4 @@
-module.exports=(function(){
+module.exports=function(){
     $('.contact__toggler').on('click', function () {
         var $this = $(this);
         var contactMenu = $('.contact__menu');
@@ -210,11 +210,11 @@ module.exports=(function(){
             },
             scrollwheel:false
         });
-        var contentString = '<div class="map__popup">Я тут</div>';
+       /* var contentString = '<div class="map__popup">Я тут</div>';
         var infowindow = new google.maps.InfoWindow({
             content: contentString,
             maxWidth: 200
-        });
+        });*/
         marker = new google.maps.Marker({
             map: map,
             draggable: false,
@@ -222,12 +222,12 @@ module.exports=(function(){
             position: myLatlng,
             title:'Я здесь'
         });
-        marker.addListener('click', function () {
-            // infowindow.open(map, marker);
-        });
+        /*marker.addListener('click', function () {
+            infowindow.open(map, marker);
+        });*/
 
         map.setOptions({styles: style});
     }
     window.initMap=initMap;
 
-})();
+};

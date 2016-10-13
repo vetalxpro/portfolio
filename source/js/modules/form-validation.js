@@ -36,10 +36,10 @@ module.exports = (function () {
     elemParent.removeClass('valid');
     elemParent.addClass('error');
     if(elem.attr('id')==='yes'){
-      _createTooltip(elem,elem.data('content'),'bottom');
+      _createTooltip(elem,'bottom');
       return false;
     }
-    _createTooltip(elem,elem.data('content'));
+    _createTooltip(elem);
   };
   var _removeError = function () {
     var $this=$(this);
@@ -61,7 +61,11 @@ module.exports = (function () {
     $form.find('.error').removeClass('error');
     $form.find('.tooltip').remove();
   };
-  var _createTooltip=function(elem,content,position){
+  var _createTooltip=function(elem,position){
+    var content = elem.data('content');
+    if(!content){
+      content='Не заполнено поле';
+    }
     var toolTip = $('<div />').text(content);
     if(position==='bottom'){
       toolTip.addClass('tooltip arrow-top');

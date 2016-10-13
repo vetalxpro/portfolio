@@ -1,8 +1,8 @@
-module.exports = (function () {
+module.exports = function () {
   var $sidebar = $('.blog__sidebar');
   var $body = $('body');
   var scrollTop;
-  var headerHeight = $('.header_blog').height();
+  var header = $('.header_blog');
 
   function toggleMenu() {
     if ($sidebar.hasClass('active')) {
@@ -31,7 +31,7 @@ module.exports = (function () {
   }
 
   function checkSidebarPosition(scrollTop) {
-    if (scrollTop < headerHeight) {
+    if (scrollTop < header.height()) {
       $sidebar.removeClass('fixed');
     } else {
       $sidebar.addClass('fixed');
@@ -45,4 +45,4 @@ module.exports = (function () {
       toggleMenu();
     }
   });
-})();
+};

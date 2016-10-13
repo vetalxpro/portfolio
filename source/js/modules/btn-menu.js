@@ -1,4 +1,4 @@
-module.exports=(function(){
+module.exports=function(){
   //btn-menu
   var $modal = $('.modal');
   if($modal.length){
@@ -32,4 +32,4 @@ module.exports=(function(){
       $('modal__window').toggleClass('rubberBand');
     });
   }
-})();
+};

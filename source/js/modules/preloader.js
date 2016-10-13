@@ -1,4 +1,4 @@
-module.exports = (function () {
+module.exports = function () {
   var path;
   var imgsTotal;
   var imgs = [];
@@ -50,4 +50,4 @@ module.exports = (function () {
   }
 
 
-})();
+};

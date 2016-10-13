@@ -1,46 +1,49 @@
-module.exports=function drawSkills(radius) {
-  var
-      circleLength = 2 * Math.PI * radius,
-      delay = 1,
-      animate = 'animate-skill 1s ease-in-out reverse';
+module.exports = function drawSkills(radius) {
+  var circleLength = 2 * Math.PI * radius;
+  var delay = 100;
+  var maxPercent = 100;
+  var minPercent = 1;
+  var currentPercent;
+  var drawValue;
+  var animate = 'animate-skill 1s ease-in-out reverse';
+  var $skillsElems = $('.skill__list-item');
 
   function findElements() {
-    var skillsElems = $('.skill__list-item'),
-        skillsCount = skillsElems.length;
-    for (var i = 0; i < skillsCount; i++) {
-      var skill = skillsElems.eq(i);
-      var attr = skill.attr('data-value');
-      if (attr > 100) {
-        attr = 100;
-      }
-      if (attr < 0) {
-        attr = 1;
-      }
-      var value = circleLength - attr * circleLength / 100;
-      draw(skill, value, delay, attr);
-      delay += 1;
+    var skillsCount = $skillsElems.length;
+    if (skillsCount) {
+      for (var i = 0; i < skillsCount; i++) {
+        var skill = $skillsElems.eq(i);
+        currentPercent = skill.attr('data-percent');
+        if (currentPercent > maxPercent) {
+          currentPercent = maxPercent;
+        }
+        if (currentPercent < minPercent || !currentPercent) {
+          currentPercent = minPercent;
+        }
+        drawValue = circleLength - currentPercent * circleLength / maxPercent;
+        draw(skill, drawValue, delay, currentPercent);
+        delay += 100;
 
+      }
     }
+
   }
 
-  function draw(skill, value, delay, attr) {
+  function draw(skill, drawValue, delay, percent) {
     setTimeout(function () {
-      if (attr < 50) {
+      if (percent < maxPercent / 2) {
         skill.find('.skill__path').css({
           'opacity': 0.6,
-          'stroke-dashoffset': value,
+          'stroke-dashoffset': drawValue,
           'animation': animate
         });
       } else {
-        skill.find('.skill__path').css({'stroke-dashoffset': value, 'animation': animate});
+        skill.find('.skill__path').css({'stroke-dashoffset': drawValue, 'animation': animate});
       }
-    }, delay * 100);
+    }, delay);
 
   }
 
-  function start() {
-    findElements();
-  }
+  findElements();
 
-  start();
 };

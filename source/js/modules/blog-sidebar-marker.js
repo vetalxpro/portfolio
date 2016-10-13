@@ -1,4 +1,4 @@
-module.exports = (function () {
+module.exports = function () {
   var $sidebar = $('.blog__sidebar');
   if ($sidebar.length > 0) {
     init();
@@ -47,4 +47,4 @@ module.exports = (function () {
           .addClass("active");
     }
   }
-})();
+};
