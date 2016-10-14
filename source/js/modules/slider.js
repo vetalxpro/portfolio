@@ -8,7 +8,7 @@ module.exports = function () {
     var downCounter = 0;
     var upCounter = 2;
     var awayCounter = 0;
-    var $sliderPreview = $slider.find('.slider__preview');
+    // var $sliderPreview = $slider.find('.slider__preview');
     var $downList = $slider.find('.slider__preview-list-down');
     var $upList = $slider.find('.slider__preview-list-up');
     var $controlDown = $slider.find('.slider__control_down');
@@ -16,7 +16,6 @@ module.exports = function () {
     var $viewBig = $slider.find('.slider__view-big');
     var titleContainer = $slider.find('.slider__main-subtitle');
     var techContainer = $slider.find('.slider__tech');
-
 
     //down items
     var $downItems = $downList.find('.slider__preview-item');
@@ -31,11 +30,10 @@ module.exports = function () {
       $viewBig.addClass('pic-away');
     });
 
-    $sliderPreview.on('transitionend', '.away', function (e) {
-
+    $slider.on('transitionend', '.away', function (e) {
       $(this).removeClass('away').trigger('endAway');
     });
-    $slider.on('endAway', function (e) {
+    $slider.on('endAway', function () {
       awayCounter++;
       if (awayCounter === 2) {
         awayCounter = 0;
@@ -101,7 +99,7 @@ module.exports = function () {
     //next
     reqDown.addClass('active').trigger('next');
     reqUp.addClass('active');
-    generateSliderText.generate(titleContainer,$downItems.eq(downCounter));
-    generateSliderText.generate(techContainer,$downItems.eq(downCounter));
+    generateSliderText(titleContainer,$downItems.eq(downCounter));
+    generateSliderText(techContainer,$downItems.eq(downCounter));
   }
 };
