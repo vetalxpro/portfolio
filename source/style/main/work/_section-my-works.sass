@@ -113,9 +113,10 @@
         height: 100%
         transition-property: opacity
         transition-duration: 0.6s
-        opacity: 1
-        &.pic-away
-            opacity: 0
+        //opacity: 1
+        &.animate
+            animation: pic-animate 0.8s ease
+
     &__view-pic
         position: absolute
         top: 50%
@@ -205,10 +206,11 @@
     &__preview-item
         position: absolute
         left: 0
+        top: 0
         height: 100%
         width: 100%
         transition-duration: 0s
-        transition-property: top, bottom
+        transition-property: transform
         z-index: 1
         background: #b4b4b4
         overflow: hidden
@@ -221,25 +223,31 @@
     &__preview-list-down
         //border-right: 1px solid #fff
         .slider__preview-item
-            top: -100%
+            //top: -100%
+            transform: translateY(100%)
             &.active
                 transition-duration: 0.6s
-                top: 0
+                //top: 0
+                transform: translateY(0)
                 z-index: 10
             &.away
                 transition-duration: 0.6s
-                top: 100%
+                //top: 100%
+                transform: translateY(-100%)
                 z-index: 1
     &__preview-list-up
         //border-left: 1px solid #fff
         .slider__preview-item
-            bottom: -100%
+            transform: translateY(-100%)
+            //bottom: -100%
             &.active
                 transition-duration: 0.6s
-                bottom: 0
+                //bottom: 0
+                transform: translateY(0)
                 z-index: 10
             &.away
-                bottom: 100%
+                //bottom: 100%
+                transform: translateY(100%)
                 transition-duration: 0.6s
                 z-index: 1
 

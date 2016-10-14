@@ -2,20 +2,20 @@ module.exports = function () {
   var $slider = $('.slider');
 
   if ($slider.length > 0) {
-    var sliderInfo = require('./sliderInfo');
     var generateSliderText = require('./generate-slider-text');
     var flag = true;
     var downCounter = 0;
     var upCounter = 2;
     var awayCounter = 0;
-    // var $sliderPreview = $slider.find('.slider__preview');
     var $downList = $slider.find('.slider__preview-list-down');
     var $upList = $slider.find('.slider__preview-list-up');
     var $controlDown = $slider.find('.slider__control_down');
     var $controlUp = $slider.find('.slider__control_up');
     var $viewBig = $slider.find('.slider__view-big');
-    var titleContainer = $slider.find('.slider__main-subtitle');
-    var techContainer = $slider.find('.slider__tech');
+    var $title = $slider.find('.slider__main-subtitle');
+    var $tech = $slider.find('.slider__tech');
+    var $sliderPic = $slider.find('.slider__view-pic');
+    var $sliderLink = $slider.find('.slider__link');
 
     //down items
     var $downItems = $downList.find('.slider__preview-item');
@@ -23,11 +23,11 @@ module.exports = function () {
     var $upItems = $upList.find('.slider__preview-item');
     //all elements
     var length = $downItems.length;
-    //start fill info
-    sliderInfo.fill($downItems.eq(0));
-    //fill info on slidemove
+    //set slider data
+    setSliderData($downItems.eq(downCounter));
+
     $downList.on('next', '.active', function (e) {
-      $viewBig.addClass('pic-away');
+      $viewBig.addClass('animate');
     });
 
     $slider.on('transitionend', '.away', function (e) {
@@ -38,9 +38,7 @@ module.exports = function () {
       if (awayCounter === 2) {
         awayCounter = 0;
         flag = true;
-
-        sliderInfo.fill($downItems.eq(downCounter));
-        $viewBig.removeClass('pic-away');
+        $viewBig.removeClass('animate');
       }
     });
 
@@ -99,7 +97,15 @@ module.exports = function () {
     //next
     reqDown.addClass('active').trigger('next');
     reqUp.addClass('active');
-    generateSliderText(titleContainer,$downItems.eq(downCounter));
-    generateSliderText(techContainer,$downItems.eq(downCounter));
+
+    setSliderData($downItems.eq(downCounter));
+
+  }
+
+  function setSliderData(activeElement){
+    $sliderPic.attr('src', activeElement.data('pic'));
+    $sliderLink.attr('href', activeElement.data('link'));
+    generateSliderText($title, activeElement);
+    generateSliderText($tech, activeElement);
   }
 };

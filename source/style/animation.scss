@@ -34,7 +34,14 @@
   animation-name: fadeOutRight;
 }
 
-
+@keyframes pic-animate{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
 .rubberBand {
   animation-name: rubberBand;
 }

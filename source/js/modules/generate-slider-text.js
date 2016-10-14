@@ -1,6 +1,6 @@
 module.exports = function (container, element) {
   function init(){
-    container.text('');
+    container.empty();
     splitCharacters();
     setAnimation();
   }
